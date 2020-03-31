@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><process version="9.3.001">
+<?xml version="1.0" encoding="UTF-8"?><process version="9.6.000">
   <context>
     <input/>
     <output/>
     <macros/>
   </context>
-  <operator activated="true" class="process" compatibility="9.3.001" expanded="true" name="Process">
+  <operator activated="true" class="process" compatibility="9.4.000" expanded="true" name="Process">
     <parameter key="logverbosity" value="init"/>
     <parameter key="random_seed" value="2001"/>
     <parameter key="send_mail" value="never"/>
@@ -12,7 +12,7 @@
     <parameter key="process_duration_for_mail" value="30"/>
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
-      <operator activated="true" class="read_csv" compatibility="9.3.001" expanded="true" height="68" name="Read CSV Vietnamese" width="90" x="179" y="391">
+      <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV Vietnamese" width="90" x="179" y="391">
         <parameter key="csv_file" value="C:\Users\lsamel\Desktop\Lukas\Uni\3.01_BI und Big Data Design Workshop\1_Projekt_Rezepte\data\vietnames _final.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
@@ -53,10 +53,10 @@
         <parameter key="min_delay_amount" value="0"/>
         <parameter key="max_delay_amount" value="1000"/>
       </operator>
-      <operator activated="true" class="store" compatibility="9.3.001" expanded="true" height="68" name="Store Get Pages  Vietnamese" width="90" x="715" y="391">
+      <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store Get Pages  Vietnamese" width="90" x="715" y="391">
         <parameter key="repository_entry" value="get_pages_vietnamese_final"/>
       </operator>
-      <operator activated="true" class="read_csv" compatibility="9.3.001" expanded="true" height="68" name="Read CSV Croatian_2" width="90" x="179" y="238">
+      <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV Croatian" width="90" x="179" y="238">
         <parameter key="csv_file" value="C:\Users\lsamel\Desktop\Lukas\Uni\3.01_BI und Big Data Design Workshop\1_Projekt_Rezepte\data\croatian_final.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
@@ -97,12 +97,12 @@
         <parameter key="min_delay_amount" value="0"/>
         <parameter key="max_delay_amount" value="1000"/>
       </operator>
-      <operator activated="true" class="store" compatibility="9.3.001" expanded="true" height="68" name="Store Get Pages  Croatian" width="90" x="715" y="238">
+      <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store Get Pages  Croatian" width="90" x="715" y="238">
         <parameter key="repository_entry" value="get_pages_croatia_final"/>
       </operator>
       <connect from_op="Read CSV Vietnamese" from_port="output" to_op="Get Pages Vietnamese" to_port="Example Set"/>
       <connect from_op="Get Pages Vietnamese" from_port="Example Set" to_op="Store Get Pages  Vietnamese" to_port="input"/>
-      <connect from_op="Read CSV Croatian_2" from_port="output" to_op="Get Pages Croatian" to_port="Example Set"/>
+      <connect from_op="Read CSV Croatian" from_port="output" to_op="Get Pages Croatian" to_port="Example Set"/>
       <connect from_op="Get Pages Croatian" from_port="Example Set" to_op="Store Get Pages  Croatian" to_port="input"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
