@@ -129,7 +129,7 @@
         <parameter key="escape_character" value="\"/>
         <parameter key="trim_item_names" value="true"/>
         <parameter key="min_requirement" value="support"/>
-        <parameter key="min_support" value="0.05"/>
+        <parameter key="min_support" value="0.06"/>
         <parameter key="min_frequency" value="100"/>
         <parameter key="min_items_per_itemset" value="1"/>
         <parameter key="max_items_per_itemset" value="0"/>
