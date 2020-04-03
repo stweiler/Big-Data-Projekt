@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><process version="9.3.001">
+<?xml version="1.0" encoding="UTF-8"?><process version="9.6.000">
   <context>
     <input/>
     <output/>
     <macros/>
   </context>
-  <operator activated="true" class="process" compatibility="9.3.001" expanded="true" name="Process">
+  <operator activated="true" class="process" compatibility="9.4.000" expanded="true" name="Process">
     <parameter key="logverbosity" value="init"/>
     <parameter key="random_seed" value="2001"/>
     <parameter key="send_mail" value="never"/>
@@ -12,8 +12,8 @@
     <parameter key="process_duration_for_mail" value="30"/>
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
-      <operator activated="true" class="read_csv" compatibility="9.3.001" expanded="true" height="68" name="Read CSV Croatian" width="90" x="179" y="238">
-        <parameter key="csv_file" value="C:\Users\lsamel\Desktop\Lukas\Uni\3.01_BI und Big Data Design Workshop\1_Projekt_Rezepte\data\01_croatian_vietnames_final.csv"/>
+      <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV Croatian" width="90" x="179" y="238">
+        <parameter key="csv_file" value="C:\Users\MBurk\OneDrive\Documents\GitHub\Big-Data-Projekt\Daten\HdM-Daten\Daten Team 1 - 2 Länderküchen\01_croatian_vietnames_final.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
         <parameter key="use_quotes" value="true"/>
@@ -39,7 +39,7 @@
         <parameter key="datamanagement" value="double_array"/>
         <parameter key="data_management" value="auto"/>
       </operator>
-      <operator activated="true" class="web:retrieve_webpages" compatibility="9.0.000" expanded="true" height="68" name="Get Pages Croatian" width="90" x="514" y="238">
+      <operator activated="true" class="web:retrieve_webpages" compatibility="9.3.001" expanded="true" height="68" name="Get Pages Croatian" width="90" x="514" y="238">
         <parameter key="link_attribute" value="url"/>
         <parameter key="random_user_agent" value="false"/>
         <parameter key="connection_timeout" value="10000"/>
@@ -53,8 +53,8 @@
         <parameter key="min_delay_amount" value="0"/>
         <parameter key="max_delay_amount" value="1000"/>
       </operator>
-      <operator activated="true" class="store" compatibility="9.3.001" expanded="true" height="68" name="Store Get Pages  Croatian" width="90" x="715" y="238">
-        <parameter key="repository_entry" value="01_recipes_exctract_html_from_link_v_total_get_pages"/>
+      <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store Get Pages  Croatian" width="90" x="715" y="238">
+        <parameter key="repository_entry" value="Output 'Get Pages'"/>
       </operator>
       <connect from_op="Read CSV Croatian" from_port="output" to_op="Get Pages Croatian" to_port="Example Set"/>
       <connect from_op="Get Pages Croatian" from_port="Example Set" to_op="Store Get Pages  Croatian" to_port="input"/>

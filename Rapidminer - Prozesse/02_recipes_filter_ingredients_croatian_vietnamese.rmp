@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><process version="9.3.001">
+<?xml version="1.0" encoding="UTF-8"?><process version="9.6.000">
   <context>
     <input/>
     <output/>
     <macros/>
   </context>
-  <operator activated="true" class="process" compatibility="9.3.001" expanded="true" name="Process">
+  <operator activated="true" class="process" compatibility="9.4.000" expanded="true" name="Process">
     <parameter key="logverbosity" value="init"/>
     <parameter key="random_seed" value="2001"/>
     <parameter key="send_mail" value="never"/>
@@ -12,15 +12,15 @@
     <parameter key="process_duration_for_mail" value="30"/>
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
-      <operator activated="true" class="retrieve" compatibility="9.3.001" expanded="true" height="68" name="Retrieve Get Pages Total final" width="90" x="112" y="136">
-        <parameter key="repository_entry" value="01_recipes_exctract_html_from_link_v_total_get_pages"/>
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Retrieve Get Pages Total final" width="90" x="112" y="136">
+        <parameter key="repository_entry" value="Output 'Get Pages'"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="9.3.001" expanded="true" height="82" name="Set Role (2)" width="90" x="246" y="136">
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (2)" width="90" x="246" y="136">
         <parameter key="attribute_name" value="url"/>
         <parameter key="target_role" value="id"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="text:process_document_from_data" compatibility="8.2.000" expanded="true" height="82" name="Process Documents from Data (2)" width="90" x="380" y="136">
+      <operator activated="true" class="text:process_document_from_data" compatibility="9.3.001" expanded="true" height="82" name="Process Documents from Data (2)" width="90" x="380" y="136">
         <parameter key="create_word_vector" value="true"/>
         <parameter key="vector_creation" value="Binary Term Occurrences"/>
         <parameter key="add_meta_information" value="true"/>
@@ -35,83 +35,83 @@
         <parameter key="select_attributes_and_weights" value="false"/>
         <list key="specify_weights"/>
         <process expanded="true">
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens" width="90" x="45" y="34">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens" width="90" x="45" y="34">
             <list key="replace_dictionary">
               <parameter key="&lt;span class=&quot;ingredient&quot;&gt;" value="ANYWORD"/>
             </list>
           </operator>
-          <operator activated="true" class="text:tokenize" compatibility="8.2.000" expanded="true" height="68" name="Tokenize" width="90" x="45" y="136">
+          <operator activated="true" class="text:tokenize" compatibility="9.3.001" expanded="true" height="68" name="Tokenize" width="90" x="45" y="136">
             <parameter key="mode" value="non letters"/>
             <parameter key="characters" value=".:"/>
             <parameter key="language" value="English"/>
             <parameter key="max_token_length" value="3"/>
           </operator>
-          <operator activated="true" class="text:generate_n_grams_terms" compatibility="8.2.000" expanded="true" height="68" name="Generate n-Grams (Terms)" width="90" x="45" y="238">
+          <operator activated="true" class="text:generate_n_grams_terms" compatibility="9.3.001" expanded="true" height="68" name="Generate n-Grams (Terms)" width="90" x="45" y="238">
             <parameter key="max_length" value="3"/>
           </operator>
-          <operator activated="true" class="text:filter_tokens_by_content" compatibility="8.2.000" expanded="true" height="68" name="Filter Tokens (by Content)" width="90" x="45" y="340">
+          <operator activated="true" class="text:filter_tokens_by_content" compatibility="9.3.001" expanded="true" height="68" name="Filter Tokens (by Content)" width="90" x="45" y="340">
             <parameter key="condition" value="contains"/>
             <parameter key="string" value="ANYWORD"/>
             <parameter key="case_sensitive" value="false"/>
             <parameter key="invert condition" value="false"/>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (18)" width="90" x="179" y="34">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (18)" width="90" x="179" y="34">
             <list key="replace_dictionary">
               <parameter key="_" value="____________________________________________________________________________________________________"/>
             </list>
           </operator>
-          <operator activated="true" class="text:filter_by_length" compatibility="8.2.000" expanded="true" height="68" name="Filter Tokens (by Length) (3)" width="90" x="179" y="136">
+          <operator activated="true" class="text:filter_by_length" compatibility="9.3.001" expanded="true" height="68" name="Filter Tokens (by Length) (3)" width="90" x="179" y="136">
             <parameter key="min_chars" value="200"/>
             <parameter key="max_chars" value="500"/>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (19)" width="90" x="179" y="238">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (19)" width="90" x="179" y="238">
             <list key="replace_dictionary">
               <parameter key="____________________________________________________________________________________________________" value="_"/>
             </list>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (20)" width="90" x="179" y="340">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (20)" width="90" x="179" y="340">
             <list key="replace_dictionary">
               <parameter key="([a-zA-Z]+)_([a-zA-Z]+)_ANYWORD" value=" "/>
             </list>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (21)" width="90" x="313" y="340">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (21)" width="90" x="313" y="340">
             <list key="replace_dictionary">
               <parameter key="([a-zA-Z]+)_ANYWORD" value=" "/>
             </list>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (22)" width="90" x="313" y="238">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (22)" width="90" x="313" y="238">
             <list key="replace_dictionary">
               <parameter key="ANYWORD" value=" "/>
             </list>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (23)" width="90" x="313" y="136">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (23)" width="90" x="313" y="136">
             <list key="replace_dictionary">
               <parameter key="span" value=" "/>
             </list>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (24)" width="90" x="313" y="34">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (24)" width="90" x="313" y="34">
             <list key="replace_dictionary">
               <parameter key="_li" value=" _"/>
             </list>
           </operator>
-          <operator activated="true" class="text:transform_cases" compatibility="8.2.000" expanded="true" height="68" name="Transform Cases" width="90" x="447" y="34">
+          <operator activated="true" class="text:transform_cases" compatibility="9.3.001" expanded="true" height="68" name="Transform Cases" width="90" x="447" y="34">
             <parameter key="transform_to" value="lower case"/>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (25)" width="90" x="447" y="136">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (25)" width="90" x="447" y="136">
             <list key="replace_dictionary">
               <parameter key="_" value="____________________________________________________________________________________________________"/>
             </list>
           </operator>
-          <operator activated="true" class="text:filter_by_length" compatibility="8.2.000" expanded="true" height="68" name="Filter Tokens (by Length) (4)" width="90" x="447" y="238">
+          <operator activated="true" class="text:filter_by_length" compatibility="9.3.001" expanded="true" height="68" name="Filter Tokens (by Length) (4)" width="90" x="447" y="238">
             <parameter key="min_chars" value="200"/>
             <parameter key="max_chars" value="500"/>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (26)" width="90" x="447" y="340">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (26)" width="90" x="447" y="340">
             <list key="replace_dictionary">
               <parameter key="____________________________________________________________________________________________________" value="_"/>
             </list>
           </operator>
-          <operator activated="true" class="text:replace_tokens" compatibility="8.2.000" expanded="true" height="68" name="Replace Tokens (27)" width="90" x="581" y="340">
+          <operator activated="true" class="text:replace_tokens" compatibility="9.3.001" expanded="true" height="68" name="Replace Tokens (27)" width="90" x="581" y="340">
             <list key="replace_dictionary">
               <parameter key="_" value=" "/>
             </list>
@@ -139,9 +139,12 @@
           <portSpacing port="sink_document 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="multiply" compatibility="9.3.001" expanded="true" height="103" name="Multiply" width="90" x="648" y="289"/>
-      <operator activated="true" class="write_excel" compatibility="9.3.001" expanded="true" height="103" name="Write Excel_Ingredients_Total" width="90" x="849" y="340">
-        <parameter key="excel_file" value="C:\Users\lsamel\Desktop\Lukas\Uni\3.01_BI und Big Data Design Workshop\1_Projekt_Rezepte\data\ingredients_croatian_vietnamese_final.xlsx"/>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="124" name="Multiply" width="90" x="648" y="289"/>
+      <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store" width="90" x="782" y="493">
+        <parameter key="repository_entry" value="Output Preprocessing - Input Association Analysis"/>
+      </operator>
+      <operator activated="true" class="write_excel" compatibility="9.6.000" expanded="true" height="103" name="Write Excel_Ingredients_Total" width="90" x="849" y="340">
+        <parameter key="excel_file" value="C:\Users\MBurk\OneDrive\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Output Prozess 02_recipes_filter_ingredients_croatian_vietnamese.xlsx"/>
         <parameter key="file_format" value="xlsx"/>
         <enumeration key="sheet_names"/>
         <parameter key="sheet_name" value="RapidMiner Data"/>
@@ -155,6 +158,7 @@
       <connect from_op="Process Documents from Data (2)" from_port="word list" to_port="result 2"/>
       <connect from_op="Multiply" from_port="output 1" to_port="result 1"/>
       <connect from_op="Multiply" from_port="output 2" to_op="Write Excel_Ingredients_Total" to_port="input"/>
+      <connect from_op="Multiply" from_port="output 3" to_op="Store" to_port="input"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <portSpacing port="sink_result 2" spacing="0"/>
