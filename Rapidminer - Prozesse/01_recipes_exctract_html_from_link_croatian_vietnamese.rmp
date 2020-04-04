@@ -13,7 +13,7 @@
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
       <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV Croatian" width="90" x="179" y="238">
-        <parameter key="csv_file" value="C:\Users\MBurk\OneDrive\Documents\GitHub\Big-Data-Projekt\Daten\HdM-Daten\Daten Team 1 - 2 Länderküchen\01_croatian_vietnames_final.csv"/>
+        <parameter key="csv_file" value="C:\Users\MBurk\OneDrive\Documents\GitHub\Big-Data-Projekt\Daten\Input HdM Daten\Daten Team 1 - 2 Länderküchen\01_croatian_vietnames_final.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
         <parameter key="use_quotes" value="true"/>
