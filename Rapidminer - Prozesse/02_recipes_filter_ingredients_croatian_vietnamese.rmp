@@ -139,26 +139,16 @@
           <portSpacing port="sink_document 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="124" name="Multiply" width="90" x="648" y="289"/>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="103" name="Multiply" width="90" x="648" y="289"/>
       <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store" width="90" x="782" y="493">
         <parameter key="repository_entry" value="Output Preprocessing - Input Association Analysis"/>
-      </operator>
-      <operator activated="true" class="write_excel" compatibility="9.6.000" expanded="true" height="103" name="Write Excel_Ingredients_Total" width="90" x="849" y="340">
-        <parameter key="excel_file" value="C:\Users\MBurk\OneDrive\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Output Prozess 02_recipes_filter_ingredients_croatian_vietnamese.xlsx"/>
-        <parameter key="file_format" value="xlsx"/>
-        <enumeration key="sheet_names"/>
-        <parameter key="sheet_name" value="RapidMiner Data"/>
-        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
-        <parameter key="number_format" value="#.0"/>
-        <parameter key="encoding" value="SYSTEM"/>
       </operator>
       <connect from_op="Retrieve Get Pages Total final" from_port="output" to_op="Set Role (2)" to_port="example set input"/>
       <connect from_op="Set Role (2)" from_port="example set output" to_op="Process Documents from Data (2)" to_port="example set"/>
       <connect from_op="Process Documents from Data (2)" from_port="example set" to_op="Multiply" to_port="input"/>
       <connect from_op="Process Documents from Data (2)" from_port="word list" to_port="result 2"/>
       <connect from_op="Multiply" from_port="output 1" to_port="result 1"/>
-      <connect from_op="Multiply" from_port="output 2" to_op="Write Excel_Ingredients_Total" to_port="input"/>
-      <connect from_op="Multiply" from_port="output 3" to_op="Store" to_port="input"/>
+      <connect from_op="Multiply" from_port="output 2" to_op="Store" to_port="input"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <portSpacing port="sink_result 2" spacing="0"/>
