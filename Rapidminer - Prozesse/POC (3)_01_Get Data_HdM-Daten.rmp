@@ -13,7 +13,7 @@
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
       <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read HdM Trainingsdaten" width="90" x="45" y="34">
-        <parameter key="csv_file" value="https://raw.githubusercontent.com/stweiler/Big-Data-Projekt/master/Daten/Input%20HdM%20Daten/Daten%20Kurs%20Gesamt%20-%206%20L%C3%A4nderk%C3%BCchen/Training%20Recipes.csv?token=ALSXKSPU3MQ76RZLNNLJASS6RNWHW"/>
+        <parameter key="csv_file" value="https://raw.githubusercontent.com/stweiler/Big-Data-Projekt/master/Daten/Input%20HdM%20Daten/Daten%20Kurs%20Gesamt%20-%206%20L%C3%A4nderk%C3%BCchen/Training%20Recipes.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
         <parameter key="use_quotes" value="true"/>
