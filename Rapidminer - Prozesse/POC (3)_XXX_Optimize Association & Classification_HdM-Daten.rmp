@@ -62,8 +62,8 @@
       <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="103" name="Multiply (2)" width="90" x="45" y="136"/>
       <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="9.6.000" expanded="true" height="124" name="Optimize Parameters (Grid)" width="90" x="179" y="136">
         <list key="parameters">
-          <parameter key="Opt\. FP-Growth.min_support" value="[0.005;0.5;25;linear]"/>
-          <parameter key="Opt\. Association Rules.min_confidence" value="[0.10;1.0;25;linear]"/>
+          <parameter key="Opt\. FP-Growth.min_support" value="[0.01;0.4;7;linear]"/>
+          <parameter key="Opt\. Association Rules.min_confidence" value="[0.1;0.5;7;linear]"/>
         </list>
         <parameter key="error_handling" value="fail on error"/>
         <parameter key="log_performance" value="true"/>
@@ -91,7 +91,7 @@
             <enumeration key="must_contain_list"/>
           </operator>
           <operator activated="true" class="create_association_rules" compatibility="9.6.000" expanded="true" height="82" name="Opt. Association Rules" width="90" x="179" y="136">
-            <parameter key="criterion" value="confidence"/>
+            <parameter key="criterion" value="lift"/>
             <parameter key="min_confidence" value="0.1"/>
             <parameter key="min_criterion_value" value="0.8"/>
             <parameter key="gain_theta" value="2.0"/>
@@ -270,7 +270,7 @@
         <parameter key="escape_character" value="\"/>
         <parameter key="trim_item_names" value="true"/>
         <parameter key="min_requirement" value="support"/>
-        <parameter key="min_support" value="0.02"/>
+        <parameter key="min_support" value="0.01"/>
         <parameter key="min_frequency" value="100"/>
         <parameter key="min_items_per_itemset" value="1"/>
         <parameter key="max_items_per_itemset" value="0"/>
@@ -398,7 +398,11 @@
         <list key="expert_parameters"/>
         <list key="expert_parameters_"/>
       </operator>
-      <operator activated="true" class="performance_classification" compatibility="9.6.000" expanded="true" height="82" name="Performance" width="90" x="447" y="544">
+      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (2)" width="90" x="447" y="493">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="performance_classification" compatibility="9.6.000" expanded="true" height="82" name="Performance" width="90" x="581" y="493">
         <parameter key="main_criterion" value="first"/>
         <parameter key="accuracy" value="true"/>
         <parameter key="classification_error" value="false"/>
@@ -442,14 +446,14 @@
       <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Loop Attributes" to_port="input 1"/>
       <connect from_op="Loop Attributes" from_port="output 1" to_op="Numerical to Binominal (2)" to_port="example set input"/>
       <connect from_op="Numerical to Binominal (2)" from_port="example set output" to_op="Deep Learning" to_port="training set"/>
-      <connect from_op="Deep Learning" from_port="exampleSet" to_op="Performance" to_port="labelled data"/>
+      <connect from_op="Deep Learning" from_port="model" to_op="Apply Model (2)" to_port="model"/>
+      <connect from_op="Deep Learning" from_port="exampleSet" to_op="Apply Model (2)" to_port="unlabelled data"/>
+      <connect from_op="Apply Model (2)" from_port="labelled data" to_op="Performance" to_port="labelled data"/>
       <connect from_op="Performance" from_port="performance" to_port="result 2"/>
-      <connect from_op="Performance" from_port="example set" to_port="result 3"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <portSpacing port="sink_result 2" spacing="0"/>
       <portSpacing port="sink_result 3" spacing="0"/>
-      <portSpacing port="sink_result 4" spacing="0"/>
     </process>
   </operator>
 </process>
