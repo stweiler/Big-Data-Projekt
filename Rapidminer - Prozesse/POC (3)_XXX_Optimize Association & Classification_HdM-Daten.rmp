@@ -282,7 +282,7 @@
         <enumeration key="must_contain_list"/>
       </operator>
       <operator activated="true" class="create_association_rules" compatibility="9.6.000" expanded="true" height="82" name="Create Association Rules" width="90" x="246" y="340">
-        <parameter key="criterion" value="lift"/>
+        <parameter key="criterion" value="confidence"/>
         <parameter key="min_confidence" value="0.5"/>
         <parameter key="min_criterion_value" value="1.5"/>
         <parameter key="gain_theta" value="2.0"/>
