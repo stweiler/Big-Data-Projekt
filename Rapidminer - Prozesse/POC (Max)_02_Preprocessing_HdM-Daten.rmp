@@ -272,7 +272,7 @@
       </operator>
       <operator activated="true" class="multiply" compatibility="9.3.001" expanded="true" height="124" name="Multiply" width="90" x="648" y="34"/>
       <operator activated="true" class="write_excel" compatibility="9.3.001" expanded="true" height="103" name="Write Excel (3)" width="90" x="782" y="136">
-        <parameter key="excel_file" value="C:\Users\lsamel\Documents\GitHub\Big-Data-Projekt\Daten\Input HdM Daten\Daten Kurs Gesamt - 6 Länderküchen\Ingredients_Training Recipes.csv.xlsx"/>
+        <parameter key="excel_file" value="C:\Users\lsamel\Documents\GitHub\Big-Data-Projekt\Daten\Input HdM Daten\Daten Kurs Gesamt - 6 Länderküchen\Ingredients_Training_Recipes.xlsx"/>
         <parameter key="file_format" value="xlsx"/>
         <enumeration key="sheet_names"/>
         <parameter key="sheet_name" value="RapidMiner Data"/>
@@ -285,7 +285,7 @@
       </operator>
       <operator activated="true" class="multiply" compatibility="9.3.001" expanded="true" height="124" name="Multiply (3)" width="90" x="648" y="289"/>
       <operator activated="true" class="write_excel" compatibility="9.3.001" expanded="true" height="103" name="Write Excel" width="90" x="782" y="391">
-        <parameter key="excel_file" value="C:\Users\lsamel\Documents\GitHub\Big-Data-Projekt\Daten\Input HdM Daten\Daten Kurs Gesamt - 6 Länderküchen\Ingredients_Training Recipes_STEM.csv.xlsx"/>
+        <parameter key="excel_file" value="C:\Users\lsamel\Documents\GitHub\Big-Data-Projekt\Daten\Input HdM Daten\Daten Kurs Gesamt - 6 Länderküchen\Ingredients_Training_Recipes_STEM.xlsx"/>
         <parameter key="file_format" value="xlsx"/>
         <enumeration key="sheet_names"/>
         <parameter key="sheet_name" value="RapidMiner Data"/>
@@ -556,6 +556,7 @@
       </operator>
       <operator activated="true" class="multiply" compatibility="9.3.001" expanded="true" height="103" name="Multiply (5)" width="90" x="715" y="646"/>
       <operator activated="true" class="write_excel" compatibility="9.3.001" expanded="true" height="103" name="Write Excel (4)" width="90" x="916" y="697">
+        <parameter key="excel_file" value="C:\Users\lsamel\Documents\GitHub\Big-Data-Projekt\Daten\Input HdM Daten\Daten Kurs Gesamt - 6 Länderküchen\Ingredients_Test_Recipes.xlsx"/>
         <parameter key="file_format" value="xlsx"/>
         <enumeration key="sheet_names"/>
         <parameter key="sheet_name" value="RapidMiner Data"/>
@@ -568,6 +569,7 @@
       </operator>
       <operator activated="true" class="multiply" compatibility="9.3.001" expanded="true" height="103" name="Multiply (6)" width="90" x="715" y="901"/>
       <operator activated="true" class="write_excel" compatibility="9.3.001" expanded="true" height="103" name="Write Excel (2)" width="90" x="849" y="952">
+        <parameter key="excel_file" value="C:\Users\lsamel\Documents\GitHub\Big-Data-Projekt\Daten\Input HdM Daten\Daten Kurs Gesamt - 6 Länderküchen\Ingredients_Test_Recipes_STEM.xlsx"/>
         <parameter key="file_format" value="xlsx"/>
         <enumeration key="sheet_names"/>
         <parameter key="sheet_name" value="RapidMiner Data"/>
