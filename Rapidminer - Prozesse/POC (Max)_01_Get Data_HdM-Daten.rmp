@@ -66,7 +66,7 @@
       <operator activated="true" class="store" compatibility="9.3.001" expanded="true" height="68" name="Store Get Pages Trainingsdaten" width="90" x="581" y="85">
         <parameter key="repository_entry" value="POC (Max)_01_Output Get Pages_Hdm-Daten_Trainingsdaten"/>
       </operator>
-      <operator activated="false" class="read_csv" compatibility="9.3.001" expanded="true" height="68" name="Read HdM Testdaten (30 Recipes)" width="90" x="45" y="391">
+      <operator activated="true" class="read_csv" compatibility="9.3.001" expanded="true" height="68" name="Read HdM Testdaten (30 Recipes)" width="90" x="45" y="391">
         <parameter key="csv_file" value="C:\Users\lsamel\Documents\GitHub\Big-Data-Projekt\Daten\Input HdM Daten\Daten Kurs Gesamt - 6 Länderküchen\Test Recipes_v2.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
@@ -97,12 +97,12 @@
         <parameter key="datamanagement" value="double_array"/>
         <parameter key="data_management" value="auto"/>
       </operator>
-      <operator activated="false" class="rename" compatibility="9.3.001" expanded="true" height="82" name="Rename (2)" width="90" x="179" y="442">
+      <operator activated="true" class="rename" compatibility="9.3.001" expanded="true" height="82" name="Rename (2)" width="90" x="179" y="442">
         <parameter key="old_name" value="URL"/>
         <parameter key="new_name" value="Link"/>
         <list key="rename_additional_attributes"/>
       </operator>
-      <operator activated="false" class="web:retrieve_webpages" compatibility="9.3.001" expanded="true" height="68" name="Get Pages (2)" width="90" x="380" y="442">
+      <operator activated="true" class="web:retrieve_webpages" compatibility="9.3.001" expanded="true" height="68" name="Get Pages (2)" width="90" x="380" y="442">
         <parameter key="link_attribute" value="Link"/>
         <parameter key="random_user_agent" value="false"/>
         <parameter key="connection_timeout" value="10000"/>
@@ -116,8 +116,8 @@
         <parameter key="min_delay_amount" value="0"/>
         <parameter key="max_delay_amount" value="1000"/>
       </operator>
-      <operator activated="false" class="multiply" compatibility="9.3.001" expanded="true" height="82" name="Multiply (2)" width="90" x="514" y="442"/>
-      <operator activated="false" class="store" compatibility="9.3.001" expanded="true" height="68" name="Store Get Pages Testdaten" width="90" x="648" y="391">
+      <operator activated="true" class="multiply" compatibility="9.3.001" expanded="true" height="82" name="Multiply (2)" width="90" x="514" y="442"/>
+      <operator activated="true" class="store" compatibility="9.3.001" expanded="true" height="68" name="Store Get Pages Testdaten" width="90" x="648" y="391">
         <parameter key="repository_entry" value="POC (Max)_01_Output Get Pages_Hdm-Daten_Testdaten"/>
       </operator>
       <connect from_op="Read HdM Trainingsdaten (300 Recipes)" from_port="output" to_op="Rename" to_port="example set input"/>
