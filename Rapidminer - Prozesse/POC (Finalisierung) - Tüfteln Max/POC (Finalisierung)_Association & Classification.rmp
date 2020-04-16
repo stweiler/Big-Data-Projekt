@@ -1340,7 +1340,7 @@
       <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store: 300 Trainingsdaten" width="90" x="715" y="34">
         <parameter key="repository_entry" value="POC (Finalisierung)_Output Preprocessing_Trainingsdaten"/>
       </operator>
-      <operator activated="true" class="read_excel" compatibility="9.6.000" expanded="true" height="68" name="Load Offline: 30 Daten Training" width="90" x="45" y="136">
+      <operator activated="true" class="read_excel" compatibility="9.6.000" expanded="true" height="68" name="Load Offline: 30 Daten Test" width="90" x="45" y="136">
         <parameter key="excel_file" value="C:\Users\MBurk\OneDrive\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Ingredients_Test_Recipes.xlsx"/>
         <parameter key="sheet_selection" value="sheet number"/>
         <parameter key="sheet_number" value="1"/>
@@ -1665,7 +1665,7 @@
       <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store: 30 Testdaten" width="90" x="715" y="136">
         <parameter key="repository_entry" value="POC (Finalisierung)_Output Preprocessing_Testdaten"/>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Apply: 300 Trainingsdaten" width="90" x="648" y="340">
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Apply: 30 Testdaten" width="90" x="648" y="340">
         <parameter key="repository_entry" value="POC (Finalisierung)_Output Preprocessing_Testdaten"/>
       </operator>
       <operator activated="true" class="apply_association_rules" compatibility="9.6.000" expanded="true" height="82" name="Apply Association Rules" width="90" x="715" y="442">
@@ -1739,7 +1739,7 @@
         <parameter key="min" value="0.0"/>
         <parameter key="max" value="0.0"/>
       </operator>
-      <operator activated="true" class="concurrency:parallel_random_forest" compatibility="9.6.000" expanded="true" height="103" name="Random Forest" width="90" x="380" y="697">
+      <operator activated="true" class="concurrency:parallel_random_forest" compatibility="9.6.000" expanded="true" height="103" name="Random Forest" width="90" x="313" y="697">
         <parameter key="number_of_trees" value="100"/>
         <parameter key="criterion" value="gain_ratio"/>
         <parameter key="maximal_depth" value="-1"/>
@@ -1758,11 +1758,11 @@
         <parameter key="local_random_seed" value="1992"/>
         <parameter key="enable_parallel_execution" value="true"/>
       </operator>
-      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (6)" width="90" x="514" y="697">
+      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (6)" width="90" x="447" y="697">
         <list key="application_parameters"/>
         <parameter key="create_view" value="false"/>
       </operator>
-      <operator activated="true" class="performance_classification" compatibility="9.6.000" expanded="true" height="82" name="Random Forest P." width="90" x="648" y="697">
+      <operator activated="true" class="performance_classification" compatibility="9.6.000" expanded="true" height="82" name="Random Forest P." width="90" x="581" y="697">
         <parameter key="main_criterion" value="accuracy"/>
         <parameter key="accuracy" value="true"/>
         <parameter key="classification_error" value="false"/>
@@ -1799,12 +1799,12 @@
       <connect from_op="Rename" from_port="example set output" to_op="Set Role" to_port="example set input"/>
       <connect from_op="Set Role" from_port="example set output" to_op="Numerical to Binominal" to_port="example set input"/>
       <connect from_op="Numerical to Binominal" from_port="example set output" to_op="Store: 300 Trainingsdaten" to_port="input"/>
-      <connect from_op="Load Offline: 30 Daten Training" from_port="output" to_op="Select Attributes (4)" to_port="example set input"/>
+      <connect from_op="Load Offline: 30 Daten Test" from_port="output" to_op="Select Attributes (4)" to_port="example set input"/>
       <connect from_op="Select Attributes (4)" from_port="example set output" to_op="Rename (2)" to_port="example set input"/>
       <connect from_op="Rename (2)" from_port="example set output" to_op="Set Role (4)" to_port="example set input"/>
       <connect from_op="Set Role (4)" from_port="example set output" to_op="Numerical to Binominal (4)" to_port="example set input"/>
       <connect from_op="Numerical to Binominal (4)" from_port="example set output" to_op="Store: 30 Testdaten" to_port="input"/>
-      <connect from_op="Apply: 300 Trainingsdaten" from_port="output" to_op="Apply Association Rules" to_port="example set"/>
+      <connect from_op="Apply: 30 Testdaten" from_port="output" to_op="Apply Association Rules" to_port="example set"/>
       <connect from_op="Apply Association Rules" from_port="example set" to_op="Select Attributes (2)" to_port="example set input"/>
       <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Loop Attributes" to_port="input 1"/>
       <connect from_op="Loop Attributes" from_port="output 1" to_op="Numerical to Binominal (2)" to_port="example set input"/>
