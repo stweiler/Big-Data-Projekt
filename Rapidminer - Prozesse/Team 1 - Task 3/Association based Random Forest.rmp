@@ -1432,7 +1432,7 @@
         <parameter key="repository_entry" value="POC (Finalisierung)_Output Preprocessing_Testdaten"/>
       </operator>
       <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Optimize: 300 Trainingsdaten" width="90" x="179" y="340">
-        <parameter key="repository_entry" value="POC (Finalisierung)_Output Preprocessing_Trainingsdaten"/>
+        <parameter key="repository_entry" value="../POC (Finalisierung) - Tüfteln Max/POC (Finalisierung)_Output Preprocessing_Trainingsdaten"/>
       </operator>
       <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="9.6.000" expanded="true" height="124" name="Optimize Parameters (Grid)" width="90" x="313" y="340">
         <list key="parameters">
@@ -1618,7 +1618,7 @@
         </list>
       </operator>
       <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Model: 300 Trainingsdaten" width="90" x="313" y="544">
-        <parameter key="repository_entry" value="POC (Finalisierung)_Output Preprocessing_Trainingsdaten"/>
+        <parameter key="repository_entry" value="../POC (Finalisierung) - Tüfteln Max/POC (Finalisierung)_Output Preprocessing_Trainingsdaten"/>
       </operator>
       <operator activated="true" class="concurrency:fp_growth" compatibility="9.6.000" expanded="true" height="82" name="FPGROWTH" width="90" x="447" y="544">
         <parameter key="input_format" value="items in dummy coded columns"/>
@@ -1647,7 +1647,7 @@
         <parameter key="laplace_k" value="1.0"/>
       </operator>
       <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Apply: 30 Testdaten" width="90" x="447" y="697">
-        <parameter key="repository_entry" value="POC (Finalisierung)_Output Preprocessing_Testdaten"/>
+        <parameter key="repository_entry" value="../POC (Finalisierung) - Tüfteln Max/POC (Finalisierung)_Output Preprocessing_Testdaten"/>
       </operator>
       <operator activated="true" class="apply_association_rules" compatibility="9.6.000" expanded="true" height="82" name="Apply Association Rules" width="90" x="581" y="697">
         <parameter key="confidence_aggregation_method" value="binary"/>
