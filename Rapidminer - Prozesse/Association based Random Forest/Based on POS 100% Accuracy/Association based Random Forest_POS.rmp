@@ -880,8 +880,8 @@
       </operator>
       <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="9.6.000" expanded="true" height="124" name="Optimize Parameters (Grid)" width="90" x="313" y="340">
         <list key="parameters">
-          <parameter key="FPGROWTHMAX.min_support" value="[0.007;0.050;10;linear]"/>
-          <parameter key="ASSOCIATIONMAX.min_confidence" value="[0.10;0.15;12;linear]"/>
+          <parameter key="FPGROWTHMAX.min_support" value="[0.04;0.06;10;linear]"/>
+          <parameter key="ASSOCIATIONMAX.min_confidence" value="[0.10;0.20;10;linear]"/>
         </list>
         <parameter key="error_handling" value="fail on error"/>
         <parameter key="log_performance" value="true"/>
@@ -1072,7 +1072,7 @@
         <parameter key="escape_character" value="\"/>
         <parameter key="trim_item_names" value="true"/>
         <parameter key="min_requirement" value="support"/>
-        <parameter key="min_support" value="0.007"/>
+        <parameter key="min_support" value="0.05"/>
         <parameter key="min_frequency" value="100"/>
         <parameter key="min_items_per_itemset" value="1"/>
         <parameter key="max_items_per_itemset" value="0"/>
@@ -1085,7 +1085,7 @@
       </operator>
       <operator activated="true" class="create_association_rules" compatibility="9.6.000" expanded="true" height="82" name="ASSOCIATION" width="90" x="581" y="544">
         <parameter key="criterion" value="confidence"/>
-        <parameter key="min_confidence" value="0.11666666666666667"/>
+        <parameter key="min_confidence" value="0.2"/>
         <parameter key="min_criterion_value" value="1.5"/>
         <parameter key="gain_theta" value="2.0"/>
         <parameter key="laplace_k" value="1.0"/>

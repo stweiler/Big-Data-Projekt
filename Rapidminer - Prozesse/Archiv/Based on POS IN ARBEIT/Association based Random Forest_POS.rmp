@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.6.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.6.000" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_excel" compatibility="9.6.000" expanded="true" height="68" name="Load Offline: 300 Daten Training" width="90" x="45" y="34">
+        <parameter key="excel_file" value="C:\Users\MBurk\OneDrive\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output POS\Ingredients_Training_Recipes_POS_NN.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Cuisine.true.polynominal.attribute"/>
+          <parameter key="1" value="Recipe.true.polynominal.attribute"/>
+          <parameter key="2" value="URL.true.polynominal.attribute"/>
+          <parameter key="3" value="Response-Code.true.integer.attribute"/>
+          <parameter key="4" value="Response-Message.true.polynominal.attribute"/>
+          <parameter key="5" value="Content-Type.true.polynominal.attribute"/>
+          <parameter key="6" value="Content-Length.true.integer.attribute"/>
+          <parameter key="7" value="Date.true.date_time.attribute"/>
+          <parameter key="8" value="action.true.integer.attribute"/>
+          <parameter key="9" value="aminos.true.integer.attribute"/>
+          <parameter key="10" value="anchovies.true.integer.attribute"/>
+          <parameter key="11" value="anise.true.integer.attribute"/>
+          <parameter key="12" value="apple.true.integer.attribute"/>
+          <parameter key="13" value="apples.true.integer.attribute"/>
+          <parameter key="14" value="artichoke.true.integer.attribute"/>
+          <parameter key="15" value="asparagus.true.integer.attribute"/>
+          <parameter key="16" value="aubergine.true.integer.attribute"/>
+          <parameter key="17" value="aubergines.true.integer.attribute"/>
+          <parameter key="18" value="avocado.true.integer.attribute"/>
+          <parameter key="19" value="avocados.true.integer.attribute"/>
+          <parameter key="20" value="baby.true.integer.attribute"/>
+          <parameter key="21" value="bacon.true.integer.attribute"/>
+          <parameter key="22" value="bagel.true.integer.attribute"/>
+          <parameter key="23" value="baguette.true.integer.attribute"/>
+          <parameter key="24" value="baking.true.integer.attribute"/>
+          <parameter key="25" value="balls.true.integer.attribute"/>
+          <parameter key="26" value="banana.true.integer.attribute"/>
+          <parameter key="27" value="bananas.true.integer.attribute"/>
+          <parameter key="28" value="base.true.integer.attribute"/>
+          <parameter key="29" value="basil.true.integer.attribute"/>
+          <parameter key="30" value="basmati.true.integer.attribute"/>
+          <parameter key="31" value="bay.true.integer.attribute"/>
+          <parameter key="32" value="bean.true.integer.attribute"/>
+          <parameter key="33" value="beans.true.integer.attribute"/>
+          <parameter key="34" value="beansprouts.true.integer.attribute"/>
+          <parameter key="35" value="beef.true.integer.attribute"/>
+          <parameter key="36" value="beets.true.integer.attribute"/>
+          <parameter key="37" value="bell.true.integer.attribute"/>
+          <parameter key="38" value="berries.true.integer.attribute"/>
+          <parameter key="39" value="bicarbonate.true.integer.attribute"/>
+          <parameter key="40" value="bird.true.integer.attribute"/>
+          <parameter key="41" value="birds.true.integer.attribute"/>
+          <parameter key="42" value="blend.true.integer.attribute"/>
+          <parameter key="43" value="blossom.true.integer.attribute"/>
+          <parameter key="44" value="blueberry.true.integer.attribute"/>
+          <parameter key="45" value="boar.true.integer.attribute"/>
+          <parameter key="46" value="bok.true.integer.attribute"/>
+          <parameter key="47" value="bone.true.integer.attribute"/>
+          <parameter key="48" value="bonnet.true.integer.attribute"/>
+          <parameter key="49" value="bouillon.true.integer.attribute"/>
+          <parameter key="50" value="bourbon.true.integer.attribute"/>
+          <parameter key="51" value="brandy.true.integer.attribute"/>
+          <parameter key="52" value="bratwurst.true.integer.attribute"/>
+          <parameter key="53" value="bread.true.integer.attribute"/>
+          <parameter key="54" value="breadcrumbs.true.integer.attribute"/>
+          <parameter key="55" value="breast.true.integer.attribute"/>
+          <parameter key="56" value="breasts.true.integer.attribute"/>
+          <parameter key="57" value="brine.true.integer.attribute"/>
+          <parameter key="58" value="brisket.true.integer.attribute"/>
+          <parameter key="59" value="broccoli.true.integer.attribute"/>
+          <parameter key="60" value="broth.true.integer.attribute"/>
+          <parameter key="61" value="bulbs.true.integer.attribute"/>
+          <parameter key="62" value="bun.true.integer.attribute"/>
+          <parameter key="63" value="butter.true.integer.attribute"/>
+          <parameter key="64" value="buttermilk.true.integer.attribute"/>
+          <parameter key="65" value="butternut.true.integer.attribute"/>
+          <parameter key="66" value="cabbage.true.integer.attribute"/>
+          <parameter key="67" value="cake.true.integer.attribute"/>
+          <parameter key="68" value="campari.true.integer.attribute"/>
+          <parameter key="69" value="cannellini.true.integer.attribute"/>
+          <parameter key="70" value="canola.true.integer.attribute"/>
+          <parameter key="71" value="capers.true.integer.attribute"/>
+          <parameter key="72" value="capsicum.true.integer.attribute"/>
+          <parameter key="73" value="cardamom.true.integer.attribute"/>
+          <parameter key="74" value="carrot.true.integer.attribute"/>
+          <parameter key="75" value="carrots.true.integer.attribute"/>
+          <parameter key="76" value="cashews.true.integer.attribute"/>
+          <parameter key="77" value="caster.true.integer.attribute"/>
+          <parameter key="78" value="cauliflower.true.integer.attribute"/>
+          <parameter key="79" value="cayenne.true.integer.attribute"/>
+          <parameter key="80" value="celery.true.integer.attribute"/>
+          <parameter key="81" value="cham.true.integer.attribute"/>
+          <parameter key="82" value="cheddar.true.integer.attribute"/>
+          <parameter key="83" value="cheese.true.integer.attribute"/>
+          <parameter key="84" value="cherries.true.integer.attribute"/>
+          <parameter key="85" value="cherry.true.integer.attribute"/>
+          <parameter key="86" value="chestnut.true.integer.attribute"/>
+          <parameter key="87" value="chestnuts.true.integer.attribute"/>
+          <parameter key="88" value="chia.true.integer.attribute"/>
+          <parameter key="89" value="chick.true.integer.attribute"/>
+          <parameter key="90" value="chicken.true.integer.attribute"/>
+          <parameter key="91" value="chickpeas.true.integer.attribute"/>
+          <parameter key="92" value="chile.true.integer.attribute"/>
+          <parameter key="93" value="chiles.true.integer.attribute"/>
+          <parameter key="94" value="chili.true.integer.attribute"/>
+          <parameter key="95" value="chilis.true.integer.attribute"/>
+          <parameter key="96" value="chilli.true.integer.attribute"/>
+          <parameter key="97" value="chillies.true.integer.attribute"/>
+          <parameter key="98" value="chinese.true.integer.attribute"/>
+          <parameter key="99" value="chips.true.integer.attribute"/>
+          <parameter key="100" value="chives.true.integer.attribute"/>
+          <parameter key="101" value="chocolate.true.integer.attribute"/>
+          <parameter key="102" value="choi.true.integer.attribute"/>
+          <parameter key="103" value="chow.true.integer.attribute"/>
+          <parameter key="104" value="choy.true.integer.attribute"/>
+          <parameter key="105" value="chuck.true.integer.attribute"/>
+          <parameter key="106" value="chutney.true.integer.attribute"/>
+          <parameter key="107" value="ciabatta.true.integer.attribute"/>
+          <parameter key="108" value="cider.true.integer.attribute"/>
+          <parameter key="109" value="cilantro.true.integer.attribute"/>
+          <parameter key="110" value="cinnamon.true.integer.attribute"/>
+          <parameter key="111" value="clove.true.integer.attribute"/>
+          <parameter key="112" value="cloves.true.integer.attribute"/>
+          <parameter key="113" value="cocoa.true.integer.attribute"/>
+          <parameter key="114" value="coconut.true.integer.attribute"/>
+          <parameter key="115" value="coffee.true.integer.attribute"/>
+          <parameter key="116" value="cognac.true.integer.attribute"/>
+          <parameter key="117" value="coleslaw.true.integer.attribute"/>
+          <parameter key="118" value="coloring.true.integer.attribute"/>
+          <parameter key="119" value="confectioners.true.integer.attribute"/>
+          <parameter key="120" value="cooking.true.integer.attribute"/>
+          <parameter key="121" value="coriander.true.integer.attribute"/>
+          <parameter key="122" value="corn.true.integer.attribute"/>
+          <parameter key="123" value="cornflour.true.integer.attribute"/>
+          <parameter key="124" value="corns.true.integer.attribute"/>
+          <parameter key="125" value="cornstarch.true.integer.attribute"/>
+          <parameter key="126" value="cottage.true.integer.attribute"/>
+          <parameter key="127" value="courgette.true.integer.attribute"/>
+          <parameter key="128" value="crackers.true.integer.attribute"/>
+          <parameter key="129" value="cream.true.integer.attribute"/>
+          <parameter key="130" value="cremini.true.integer.attribute"/>
+          <parameter key="131" value="crimini.true.integer.attribute"/>
+          <parameter key="132" value="crumbs.true.integer.attribute"/>
+          <parameter key="133" value="crêpes.true.integer.attribute"/>
+          <parameter key="134" value="cubes.true.integer.attribute"/>
+          <parameter key="135" value="cucumber.true.integer.attribute"/>
+          <parameter key="136" value="cucumbers.true.integer.attribute"/>
+          <parameter key="137" value="cumin.true.integer.attribute"/>
+          <parameter key="138" value="curd.true.integer.attribute"/>
+          <parameter key="139" value="curry.true.integer.attribute"/>
+          <parameter key="140" value="cutlets.true.integer.attribute"/>
+          <parameter key="141" value="cuts.true.integer.attribute"/>
+          <parameter key="142" value="daikon.true.integer.attribute"/>
+          <parameter key="143" value="demerara.true.integer.attribute"/>
+          <parameter key="144" value="dessert.true.integer.attribute"/>
+          <parameter key="145" value="dijon.true.integer.attribute"/>
+          <parameter key="146" value="dill.true.integer.attribute"/>
+          <parameter key="147" value="dipping.true.integer.attribute"/>
+          <parameter key="148" value="dough.true.integer.attribute"/>
+          <parameter key="149" value="dressing.true.integer.attribute"/>
+          <parameter key="150" value="drumsticks.true.integer.attribute"/>
+          <parameter key="151" value="egg.true.integer.attribute"/>
+          <parameter key="152" value="eggplant.true.integer.attribute"/>
+          <parameter key="153" value="eggplants.true.integer.attribute"/>
+          <parameter key="154" value="eggs.true.integer.attribute"/>
+          <parameter key="155" value="elbow.true.integer.attribute"/>
+          <parameter key="156" value="enoki.true.integer.attribute"/>
+          <parameter key="157" value="everything.true.integer.attribute"/>
+          <parameter key="158" value="eye.true.integer.attribute"/>
+          <parameter key="159" value="farfalle.true.integer.attribute"/>
+          <parameter key="160" value="fat.true.integer.attribute"/>
+          <parameter key="161" value="feet.true.integer.attribute"/>
+          <parameter key="162" value="fennel.true.integer.attribute"/>
+          <parameter key="163" value="feta.true.integer.attribute"/>
+          <parameter key="164" value="fettuccine.true.integer.attribute"/>
+          <parameter key="165" value="figs.true.integer.attribute"/>
+          <parameter key="166" value="filets.true.integer.attribute"/>
+          <parameter key="167" value="fillet.true.integer.attribute"/>
+          <parameter key="168" value="fillets.true.integer.attribute"/>
+          <parameter key="169" value="filo.true.integer.attribute"/>
+          <parameter key="170" value="fingers.true.integer.attribute"/>
+          <parameter key="171" value="firm.true.integer.attribute"/>
+          <parameter key="172" value="fish.true.integer.attribute"/>
+          <parameter key="173" value="flakes.true.integer.attribute"/>
+          <parameter key="174" value="flank.true.integer.attribute"/>
+          <parameter key="175" value="flap.true.integer.attribute"/>
+          <parameter key="176" value="flatbread.true.integer.attribute"/>
+          <parameter key="177" value="flax.true.integer.attribute"/>
+          <parameter key="178" value="floret.true.integer.attribute"/>
+          <parameter key="179" value="florets.true.integer.attribute"/>
+          <parameter key="180" value="flour.true.integer.attribute"/>
+          <parameter key="181" value="food.true.integer.attribute"/>
+          <parameter key="182" value="french.true.integer.attribute"/>
+          <parameter key="183" value="fry.true.integer.attribute"/>
+          <parameter key="184" value="fuji.true.integer.attribute"/>
+          <parameter key="185" value="fusilli.true.integer.attribute"/>
+          <parameter key="186" value="gai.true.integer.attribute"/>
+          <parameter key="187" value="galangal.true.integer.attribute"/>
+          <parameter key="188" value="garbanzo.true.integer.attribute"/>
+          <parameter key="189" value="garlic.true.integer.attribute"/>
+          <parameter key="190" value="genoa.true.integer.attribute"/>
+          <parameter key="191" value="ght.true.integer.attribute"/>
+          <parameter key="192" value="ginger.true.integer.attribute"/>
+          <parameter key="193" value="glass.true.integer.attribute"/>
+          <parameter key="194" value="gnocchi.true.integer.attribute"/>
+          <parameter key="195" value="grain.true.integer.attribute"/>
+          <parameter key="196" value="grape.true.integer.attribute"/>
+          <parameter key="197" value="grapeseed.true.integer.attribute"/>
+          <parameter key="198" value="grass.true.integer.attribute"/>
+          <parameter key="199" value="greek.true.integer.attribute"/>
+          <parameter key="200" value="greens.true.integer.attribute"/>
+          <parameter key="201" value="ground.true.integer.attribute"/>
+          <parameter key="202" value="groundnut.true.integer.attribute"/>
+          <parameter key="203" value="guanciale.true.integer.attribute"/>
+          <parameter key="204" value="half.true.integer.attribute"/>
+          <parameter key="205" value="halves.true.integer.attribute"/>
+          <parameter key="206" value="ham.true.integer.attribute"/>
+          <parameter key="207" value="hass.true.integer.attribute"/>
+          <parameter key="208" value="heart.true.integer.attribute"/>
+          <parameter key="209" value="hearts.true.integer.attribute"/>
+          <parameter key="210" value="hellmann.true.integer.attribute"/>
+          <parameter key="211" value="herbs.true.integer.attribute"/>
+          <parameter key="212" value="hoisin.true.integer.attribute"/>
+          <parameter key="213" value="hokkaido.true.integer.attribute"/>
+          <parameter key="214" value="hokkien.true.integer.attribute"/>
+          <parameter key="215" value="homemade.true.integer.attribute"/>
+          <parameter key="216" value="honey.true.integer.attribute"/>
+          <parameter key="217" value="horseradish.true.integer.attribute"/>
+          <parameter key="218" value="hothouse.true.integer.attribute"/>
+          <parameter key="219" value="house.true.integer.attribute"/>
+          <parameter key="220" value="hummus.true.integer.attribute"/>
+          <parameter key="221" value="ice.true.integer.attribute"/>
+          <parameter key="222" value="iceberg.true.integer.attribute"/>
+          <parameter key="223" value="instant.true.integer.attribute"/>
+          <parameter key="224" value="jackfruit.true.integer.attribute"/>
+          <parameter key="225" value="jalapeno.true.integer.attribute"/>
+          <parameter key="226" value="jalapenos.true.integer.attribute"/>
+          <parameter key="227" value="jalapeño.true.integer.attribute"/>
+          <parameter key="228" value="jam.true.integer.attribute"/>
+          <parameter key="229" value="jicama.true.integer.attribute"/>
+          <parameter key="230" value="juice.true.integer.attribute"/>
+          <parameter key="231" value="juniper.true.integer.attribute"/>
+          <parameter key="232" value="kalamata.true.integer.attribute"/>
+          <parameter key="233" value="kale.true.integer.attribute"/>
+          <parameter key="234" value="kecap.true.integer.attribute"/>
+          <parameter key="235" value="ketchup.true.integer.attribute"/>
+          <parameter key="236" value="kikkoman.true.integer.attribute"/>
+          <parameter key="237" value="king.true.integer.attribute"/>
+          <parameter key="238" value="knorr.true.integer.attribute"/>
+          <parameter key="239" value="kosher.true.integer.attribute"/>
+          <parameter key="240" value="kraft.true.integer.attribute"/>
+          <parameter key="241" value="lamb.true.integer.attribute"/>
+          <parameter key="242" value="lan.true.integer.attribute"/>
+          <parameter key="243" value="lard.true.integer.attribute"/>
+          <parameter key="244" value="leaf.true.integer.attribute"/>
+          <parameter key="245" value="leaves.true.integer.attribute"/>
+          <parameter key="246" value="leg.true.integer.attribute"/>
+          <parameter key="247" value="lemon.true.integer.attribute"/>
+          <parameter key="248" value="lemongrass.true.integer.attribute"/>
+          <parameter key="249" value="lemons.true.integer.attribute"/>
+          <parameter key="250" value="lettuce.true.integer.attribute"/>
+          <parameter key="251" value="light.true.integer.attribute"/>
+          <parameter key="252" value="lime.true.integer.attribute"/>
+          <parameter key="253" value="limes.true.integer.attribute"/>
+          <parameter key="254" value="liquid.true.integer.attribute"/>
+          <parameter key="255" value="liver.true.integer.attribute"/>
+          <parameter key="256" value="lo.true.integer.attribute"/>
+          <parameter key="257" value="loin.true.integer.attribute"/>
+          <parameter key="258" value="macaroni.true.integer.attribute"/>
+          <parameter key="259" value="mange.true.integer.attribute"/>
+          <parameter key="260" value="mangetout.true.integer.attribute"/>
+          <parameter key="261" value="mango.true.integer.attribute"/>
+          <parameter key="262" value="manis.true.integer.attribute"/>
+          <parameter key="263" value="maraschino.true.integer.attribute"/>
+          <parameter key="264" value="margarine.true.integer.attribute"/>
+          <parameter key="265" value="marinara.true.integer.attribute"/>
+          <parameter key="266" value="masala.true.integer.attribute"/>
+          <parameter key="267" value="mayo.true.integer.attribute"/>
+          <parameter key="268" value="mayonnaise.true.integer.attribute"/>
+          <parameter key="269" value="meal.true.integer.attribute"/>
+          <parameter key="270" value="meat.true.integer.attribute"/>
+          <parameter key="271" value="medium.true.integer.attribute"/>
+          <parameter key="272" value="mein.true.integer.attribute"/>
+          <parameter key="273" value="mezzetta.true.integer.attribute"/>
+          <parameter key="274" value="mezzi.true.integer.attribute"/>
+          <parameter key="275" value="milk.true.integer.attribute"/>
+          <parameter key="276" value="mince.true.integer.attribute"/>
+          <parameter key="277" value="mini.true.integer.attribute"/>
+          <parameter key="278" value="mint.true.integer.attribute"/>
+          <parameter key="279" value="mix.true.integer.attribute"/>
+          <parameter key="280" value="mozzarella.true.integer.attribute"/>
+          <parameter key="281" value="muscovado.true.integer.attribute"/>
+          <parameter key="282" value="mushrooms.true.integer.attribute"/>
+          <parameter key="283" value="mussels.true.integer.attribute"/>
+          <parameter key="284" value="mustard.true.integer.attribute"/>
+          <parameter key="285" value="mutton.true.integer.attribute"/>
+          <parameter key="286" value="nam.true.integer.attribute"/>
+          <parameter key="287" value="napa.true.integer.attribute"/>
+          <parameter key="288" value="noodles.true.integer.attribute"/>
+          <parameter key="289" value="nuoc.true.integer.attribute"/>
+          <parameter key="290" value="nutella.true.integer.attribute"/>
+          <parameter key="291" value="nutmeg.true.integer.attribute"/>
+          <parameter key="292" value="oat.true.integer.attribute"/>
+          <parameter key="293" value="oelek.true.integer.attribute"/>
+          <parameter key="294" value="oil.true.integer.attribute"/>
+          <parameter key="295" value="olives.true.integer.attribute"/>
+          <parameter key="296" value="onion.true.integer.attribute"/>
+          <parameter key="297" value="onions.true.integer.attribute"/>
+          <parameter key="298" value="orange.true.integer.attribute"/>
+          <parameter key="299" value="oregano.true.integer.attribute"/>
+          <parameter key="300" value="orzo.true.integer.attribute"/>
+          <parameter key="301" value="oyster.true.integer.attribute"/>
+          <parameter key="302" value="pad.true.integer.attribute"/>
+          <parameter key="303" value="pak.true.integer.attribute"/>
+          <parameter key="304" value="palm.true.integer.attribute"/>
+          <parameter key="305" value="pancetta.true.integer.attribute"/>
+          <parameter key="306" value="panko.true.integer.attribute"/>
+          <parameter key="307" value="papadums.true.integer.attribute"/>
+          <parameter key="308" value="paper.true.integer.attribute"/>
+          <parameter key="309" value="paprika.true.integer.attribute"/>
+          <parameter key="310" value="parmesan.true.integer.attribute"/>
+          <parameter key="311" value="parmigiano.true.integer.attribute"/>
+          <parameter key="312" value="parsley.true.integer.attribute"/>
+          <parameter key="313" value="pasta.true.integer.attribute"/>
+          <parameter key="314" value="paste.true.integer.attribute"/>
+          <parameter key="315" value="pastry.true.integer.attribute"/>
+          <parameter key="316" value="pate.true.integer.attribute"/>
+          <parameter key="317" value="peaches.true.integer.attribute"/>
+          <parameter key="318" value="peanut.true.integer.attribute"/>
+          <parameter key="319" value="peanuts.true.integer.attribute"/>
+          <parameter key="320" value="pearls.true.integer.attribute"/>
+          <parameter key="321" value="pears.true.integer.attribute"/>
+          <parameter key="322" value="peas.true.integer.attribute"/>
+          <parameter key="323" value="pecorino.true.integer.attribute"/>
+          <parameter key="324" value="penne.true.integer.attribute"/>
+          <parameter key="325" value="peperoncini.true.integer.attribute"/>
+          <parameter key="326" value="pepper.true.integer.attribute"/>
+          <parameter key="327" value="peppercorn.true.integer.attribute"/>
+          <parameter key="328" value="peppercorns.true.integer.attribute"/>
+          <parameter key="329" value="pepperoncini.true.integer.attribute"/>
+          <parameter key="330" value="pepperoncinis.true.integer.attribute"/>
+          <parameter key="331" value="pepperoni.true.integer.attribute"/>
+          <parameter key="332" value="peppers.true.integer.attribute"/>
+          <parameter key="333" value="philadelphia.true.integer.attribute"/>
+          <parameter key="334" value="pickle.true.integer.attribute"/>
+          <parameter key="335" value="pie.true.integer.attribute"/>
+          <parameter key="336" value="pieces.true.integer.attribute"/>
+          <parameter key="337" value="pineapple.true.integer.attribute"/>
+          <parameter key="338" value="pita.true.integer.attribute"/>
+          <parameter key="339" value="pla.true.integer.attribute"/>
+          <parameter key="340" value="plum.true.integer.attribute"/>
+          <parameter key="341" value="pod.true.integer.attribute"/>
+          <parameter key="342" value="pods.true.integer.attribute"/>
+          <parameter key="343" value="pomelo.true.integer.attribute"/>
+          <parameter key="344" value="pork.true.integer.attribute"/>
+          <parameter key="345" value="potato.true.integer.attribute"/>
+          <parameter key="346" value="potatoes.true.integer.attribute"/>
+          <parameter key="347" value="powder.true.integer.attribute"/>
+          <parameter key="348" value="prawn.true.integer.attribute"/>
+          <parameter key="349" value="prawns.true.integer.attribute"/>
+          <parameter key="350" value="progresso.true.integer.attribute"/>
+          <parameter key="351" value="prunes.true.integer.attribute"/>
+          <parameter key="352" value="puff.true.integer.attribute"/>
+          <parameter key="353" value="pumpkin.true.integer.attribute"/>
+          <parameter key="354" value="puree.true.integer.attribute"/>
+          <parameter key="355" value="purpose.true.integer.attribute"/>
+          <parameter key="356" value="quinoa.true.integer.attribute"/>
+          <parameter key="357" value="quorn.true.integer.attribute"/>
+          <parameter key="358" value="rabe.true.integer.attribute"/>
+          <parameter key="359" value="radish.true.integer.attribute"/>
+          <parameter key="360" value="radishes.true.integer.attribute"/>
+          <parameter key="361" value="raisins.true.integer.attribute"/>
+          <parameter key="362" value="ram.true.integer.attribute"/>
+          <parameter key="363" value="ramen.true.integer.attribute"/>
+          <parameter key="364" value="range.true.integer.attribute"/>
+          <parameter key="365" value="rapeseed.true.integer.attribute"/>
+          <parameter key="366" value="rau.true.integer.attribute"/>
+          <parameter key="367" value="ravioli.true.integer.attribute"/>
+          <parameter key="368" value="recipe.true.integer.attribute"/>
+          <parameter key="369" value="reggiano.true.integer.attribute"/>
+          <parameter key="370" value="rib.true.integer.attribute"/>
+          <parameter key="371" value="riblets.true.integer.attribute"/>
+          <parameter key="372" value="ribs.true.integer.attribute"/>
+          <parameter key="373" value="rice.true.integer.attribute"/>
+          <parameter key="374" value="ricotta.true.integer.attribute"/>
+          <parameter key="375" value="rigatoni.true.integer.attribute"/>
+          <parameter key="376" value="rinds.true.integer.attribute"/>
+          <parameter key="377" value="roast.true.integer.attribute"/>
+          <parameter key="378" value="rock.true.integer.attribute"/>
+          <parameter key="379" value="roll.true.integer.attribute"/>
+          <parameter key="380" value="rolls.true.integer.attribute"/>
+          <parameter key="381" value="roma.true.integer.attribute"/>
+          <parameter key="382" value="romaine.true.integer.attribute"/>
+          <parameter key="383" value="romano.true.integer.attribute"/>
+          <parameter key="384" value="root.true.integer.attribute"/>
+          <parameter key="385" value="roots.true.integer.attribute"/>
+          <parameter key="386" value="rosemary.true.integer.attribute"/>
+          <parameter key="387" value="rotini.true.integer.attribute"/>
+          <parameter key="388" value="rum.true.integer.attribute"/>
+          <parameter key="389" value="russet.true.integer.attribute"/>
+          <parameter key="390" value="sage.true.integer.attribute"/>
+          <parameter key="391" value="salad.true.integer.attribute"/>
+          <parameter key="392" value="salami.true.integer.attribute"/>
+          <parameter key="393" value="salmon.true.integer.attribute"/>
+          <parameter key="394" value="salt.true.integer.attribute"/>
+          <parameter key="395" value="sandwich.true.integer.attribute"/>
+          <parameter key="396" value="satay.true.integer.attribute"/>
+          <parameter key="397" value="sauce.true.integer.attribute"/>
+          <parameter key="398" value="sauerkraut.true.integer.attribute"/>
+          <parameter key="399" value="sausage.true.integer.attribute"/>
+          <parameter key="400" value="sausages.true.integer.attribute"/>
+          <parameter key="401" value="scallion.true.integer.attribute"/>
+          <parameter key="402" value="scallions.true.integer.attribute"/>
+          <parameter key="403" value="scallops.true.integer.attribute"/>
+          <parameter key="404" value="scotch.true.integer.attribute"/>
+          <parameter key="405" value="sea.true.integer.attribute"/>
+          <parameter key="406" value="seasons.true.integer.attribute"/>
+          <parameter key="407" value="seed.true.integer.attribute"/>
+          <parameter key="408" value="seeds.true.integer.attribute"/>
+          <parameter key="409" value="semi.true.integer.attribute"/>
+          <parameter key="410" value="semolina.true.integer.attribute"/>
+          <parameter key="411" value="serrano.true.integer.attribute"/>
+          <parameter key="412" value="sesame.true.integer.attribute"/>
+          <parameter key="413" value="shallot.true.integer.attribute"/>
+          <parameter key="414" value="shallots.true.integer.attribute"/>
+          <parameter key="415" value="shank.true.integer.attribute"/>
+          <parameter key="416" value="shao.true.integer.attribute"/>
+          <parameter key="417" value="sherry.true.integer.attribute"/>
+          <parameter key="418" value="shiitake.true.integer.attribute"/>
+          <parameter key="419" value="shin.true.integer.attribute"/>
+          <parameter key="420" value="shirataki.true.integer.attribute"/>
+          <parameter key="421" value="shiso.true.integer.attribute"/>
+          <parameter key="422" value="shoulder.true.integer.attribute"/>
+          <parameter key="423" value="shrimp.true.integer.attribute"/>
+          <parameter key="424" value="shrimps.true.integer.attribute"/>
+          <parameter key="425" value="sirloin.true.integer.attribute"/>
+          <parameter key="426" value="skim.true.integer.attribute"/>
+          <parameter key="427" value="skin.true.integer.attribute"/>
+          <parameter key="428" value="slaw.true.integer.attribute"/>
+          <parameter key="429" value="slices.true.integer.attribute"/>
+          <parameter key="430" value="smith.true.integer.attribute"/>
+          <parameter key="431" value="smucker.true.integer.attribute"/>
+          <parameter key="432" value="snake.true.integer.attribute"/>
+          <parameter key="433" value="snap.true.integer.attribute"/>
+          <parameter key="434" value="snow.true.integer.attribute"/>
+          <parameter key="435" value="soda.true.integer.attribute"/>
+          <parameter key="436" value="sodium.true.integer.attribute"/>
+          <parameter key="437" value="sorghum.true.integer.attribute"/>
+          <parameter key="438" value="soup.true.integer.attribute"/>
+          <parameter key="439" value="soy.true.integer.attribute"/>
+          <parameter key="440" value="soya.true.integer.attribute"/>
+          <parameter key="441" value="spaghetti.true.integer.attribute"/>
+          <parameter key="442" value="spaghettini.true.integer.attribute"/>
+          <parameter key="443" value="spareribs.true.integer.attribute"/>
+          <parameter key="444" value="sparkling.true.integer.attribute"/>
+          <parameter key="445" value="spearmint.true.integer.attribute"/>
+          <parameter key="446" value="spears.true.integer.attribute"/>
+          <parameter key="447" value="spice.true.integer.attribute"/>
+          <parameter key="448" value="spicy.true.integer.attribute"/>
+          <parameter key="449" value="spinach.true.integer.attribute"/>
+          <parameter key="450" value="sponge.true.integer.attribute"/>
+          <parameter key="451" value="spray.true.integer.attribute"/>
+          <parameter key="452" value="sprigs.true.integer.attribute"/>
+          <parameter key="453" value="spring.true.integer.attribute"/>
+          <parameter key="454" value="sprouts.true.integer.attribute"/>
+          <parameter key="455" value="squash.true.integer.attribute"/>
+          <parameter key="456" value="squid.true.integer.attribute"/>
+          <parameter key="457" value="sriracha.true.integer.attribute"/>
+          <parameter key="458" value="stalk.true.integer.attribute"/>
+          <parameter key="459" value="stalks.true.integer.attribute"/>
+          <parameter key="460" value="star.true.integer.attribute"/>
+          <parameter key="461" value="starch.true.integer.attribute"/>
+          <parameter key="462" value="steak.true.integer.attribute"/>
+          <parameter key="463" value="stems.true.integer.attribute"/>
+          <parameter key="464" value="stevia.true.integer.attribute"/>
+          <parameter key="465" value="stick.true.integer.attribute"/>
+          <parameter key="466" value="sticks.true.integer.attribute"/>
+          <parameter key="467" value="stir.true.integer.attribute"/>
+          <parameter key="468" value="stock.true.integer.attribute"/>
+          <parameter key="469" value="sugar.true.integer.attribute"/>
+          <parameter key="470" value="sultanas.true.integer.attribute"/>
+          <parameter key="471" value="sun.true.integer.attribute"/>
+          <parameter key="472" value="sunflower.true.integer.attribute"/>
+          <parameter key="473" value="sweetener.true.integer.attribute"/>
+          <parameter key="474" value="syrup.true.integer.attribute"/>
+          <parameter key="475" value="table.true.integer.attribute"/>
+          <parameter key="476" value="tahini.true.integer.attribute"/>
+          <parameter key="477" value="tamarind.true.integer.attribute"/>
+          <parameter key="478" value="tapioca.true.integer.attribute"/>
+          <parameter key="479" value="taro.true.integer.attribute"/>
+          <parameter key="480" value="tart.true.integer.attribute"/>
+          <parameter key="481" value="tartar.true.integer.attribute"/>
+          <parameter key="482" value="tenderloin.true.integer.attribute"/>
+          <parameter key="483" value="teriyaki.true.integer.attribute"/>
+          <parameter key="484" value="thigh.true.integer.attribute"/>
+          <parameter key="485" value="thighs.true.integer.attribute"/>
+          <parameter key="486" value="thyme.true.integer.attribute"/>
+          <parameter key="487" value="tie.true.integer.attribute"/>
+          <parameter key="488" value="tiger.true.integer.attribute"/>
+          <parameter key="489" value="tipo.true.integer.attribute"/>
+          <parameter key="490" value="tofu.true.integer.attribute"/>
+          <parameter key="491" value="tomato.true.integer.attribute"/>
+          <parameter key="492" value="tomatoes.true.integer.attribute"/>
+          <parameter key="493" value="tortilla.true.integer.attribute"/>
+          <parameter key="494" value="tout.true.integer.attribute"/>
+          <parameter key="495" value="tripe.true.integer.attribute"/>
+          <parameter key="496" value="turkey.true.integer.attribute"/>
+          <parameter key="497" value="turmeric.true.integer.attribute"/>
+          <parameter key="498" value="turnip.true.integer.attribute"/>
+          <parameter key="499" value="tyson.true.integer.attribute"/>
+          <parameter key="500" value="tzatziki.true.integer.attribute"/>
+          <parameter key="501" value="udon.true.integer.attribute"/>
+          <parameter key="502" value="vanilla.true.integer.attribute"/>
+          <parameter key="503" value="veal.true.integer.attribute"/>
+          <parameter key="504" value="vegetable.true.integer.attribute"/>
+          <parameter key="505" value="vegetables.true.integer.attribute"/>
+          <parameter key="506" value="veggies.true.integer.attribute"/>
+          <parameter key="507" value="vermicelli.true.integer.attribute"/>
+          <parameter key="508" value="vers.true.integer.attribute"/>
+          <parameter key="509" value="vietnamese.true.integer.attribute"/>
+          <parameter key="510" value="vinaigrette.true.integer.attribute"/>
+          <parameter key="511" value="vine.true.integer.attribute"/>
+          <parameter key="512" value="vinegar.true.integer.attribute"/>
+          <parameter key="513" value="virgin.true.integer.attribute"/>
+          <parameter key="514" value="walnut.true.integer.attribute"/>
+          <parameter key="515" value="walnuts.true.integer.attribute"/>
+          <parameter key="516" value="water.true.integer.attribute"/>
+          <parameter key="517" value="wedges.true.integer.attribute"/>
+          <parameter key="518" value="weed.true.integer.attribute"/>
+          <parameter key="519" value="wheat.true.integer.attribute"/>
+          <parameter key="520" value="whisky.true.integer.attribute"/>
+          <parameter key="521" value="whites.true.integer.attribute"/>
+          <parameter key="522" value="wine.true.integer.attribute"/>
+          <parameter key="523" value="wonton.true.integer.attribute"/>
+          <parameter key="524" value="wrappers.true.integer.attribute"/>
+          <parameter key="525" value="x.true.integer.attribute"/>
+          <parameter key="526" value="xo.true.integer.attribute"/>
+          <parameter key="527" value="yeast.true.integer.attribute"/>
+          <parameter key="528" value="yogurt.true.integer.attribute"/>
+          <parameter key="529" value="yolk.true.integer.attribute"/>
+          <parameter key="530" value="yolks.true.integer.attribute"/>
+          <parameter key="531" value="zest.true.integer.attribute"/>
+          <parameter key="532" value="zesty.true.integer.attribute"/>
+          <parameter key="533" value="zucchini.true.integer.attribute"/>
+          <parameter key="534" value="zucchinis.true.integer.attribute"/>
+          <parameter key="535" value="Link.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes" width="90" x="179" y="34">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="Content-Length|Content-Type|Date|Link|Response-Code|Response-Message|URL|url"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="true"/>
+        <parameter key="include_special_attributes" value="true"/>
+      </operator>
+      <operator activated="true" class="rename" compatibility="9.6.000" expanded="true" height="82" name="Rename" width="90" x="313" y="34">
+        <parameter key="old_name" value="Cuisine"/>
+        <parameter key="new_name" value="Länderküche"/>
+        <list key="rename_additional_attributes">
+          <parameter key="Recipe" value="Rezept"/>
+        </list>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role" width="90" x="447" y="34">
+        <parameter key="attribute_name" value="Rezept"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles">
+          <parameter key="Länderküche" value="label"/>
+        </list>
+      </operator>
+      <operator activated="true" class="numerical_to_binominal" compatibility="9.6.000" expanded="true" height="82" name="Numerical to Binominal" width="90" x="581" y="34">
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="numeric"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="real"/>
+        <parameter key="block_type" value="value_series"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_series_end"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="min" value="0.0"/>
+        <parameter key="max" value="0.0"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store: 300 Trainingsdaten" width="90" x="715" y="34">
+        <parameter key="repository_entry" value="Input_Trainingsdaten_POS"/>
+      </operator>
+      <operator activated="true" class="read_excel" compatibility="9.6.000" expanded="true" height="68" name="Load Offline: 30 Daten Test" width="90" x="45" y="187">
+        <parameter key="excel_file" value="C:\Users\MBurk\OneDrive\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output POS\Ingredients_Test_Recipes_POS_NN.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Cuisine.true.polynominal.attribute"/>
+          <parameter key="1" value="Recipe.true.polynominal.attribute"/>
+          <parameter key="2" value="URL.true.polynominal.attribute"/>
+          <parameter key="3" value="Response-Code.true.integer.attribute"/>
+          <parameter key="4" value="Response-Message.true.polynominal.attribute"/>
+          <parameter key="5" value="Content-Type.true.polynominal.attribute"/>
+          <parameter key="6" value="Content-Length.true.integer.attribute"/>
+          <parameter key="7" value="Date.true.date_time.attribute"/>
+          <parameter key="8" value="almonds.true.integer.attribute"/>
+          <parameter key="9" value="anise.true.integer.attribute"/>
+          <parameter key="10" value="apple.true.integer.attribute"/>
+          <parameter key="11" value="bacon.true.integer.attribute"/>
+          <parameter key="12" value="baking.true.integer.attribute"/>
+          <parameter key="13" value="banana.true.integer.attribute"/>
+          <parameter key="14" value="basil.true.integer.attribute"/>
+          <parameter key="15" value="bay.true.integer.attribute"/>
+          <parameter key="16" value="bean.true.integer.attribute"/>
+          <parameter key="17" value="beef.true.integer.attribute"/>
+          <parameter key="18" value="bell.true.integer.attribute"/>
+          <parameter key="19" value="bread.true.integer.attribute"/>
+          <parameter key="20" value="breast.true.integer.attribute"/>
+          <parameter key="21" value="breasts.true.integer.attribute"/>
+          <parameter key="22" value="broccoli.true.integer.attribute"/>
+          <parameter key="23" value="broth.true.integer.attribute"/>
+          <parameter key="24" value="butter.true.integer.attribute"/>
+          <parameter key="25" value="cabbage.true.integer.attribute"/>
+          <parameter key="26" value="canola.true.integer.attribute"/>
+          <parameter key="27" value="cardamom.true.integer.attribute"/>
+          <parameter key="28" value="carrot.true.integer.attribute"/>
+          <parameter key="29" value="carrots.true.integer.attribute"/>
+          <parameter key="30" value="cashew.true.integer.attribute"/>
+          <parameter key="31" value="celery.true.integer.attribute"/>
+          <parameter key="32" value="cheese.true.integer.attribute"/>
+          <parameter key="33" value="cherry.true.integer.attribute"/>
+          <parameter key="34" value="chicken.true.integer.attribute"/>
+          <parameter key="35" value="chiles.true.integer.attribute"/>
+          <parameter key="36" value="chili.true.integer.attribute"/>
+          <parameter key="37" value="chilies.true.integer.attribute"/>
+          <parameter key="38" value="chilli.true.integer.attribute"/>
+          <parameter key="39" value="chillies.true.integer.attribute"/>
+          <parameter key="40" value="chinese.true.integer.attribute"/>
+          <parameter key="41" value="cider.true.integer.attribute"/>
+          <parameter key="42" value="cilantro.true.integer.attribute"/>
+          <parameter key="43" value="cinnamon.true.integer.attribute"/>
+          <parameter key="44" value="cloves.true.integer.attribute"/>
+          <parameter key="45" value="cocoa.true.integer.attribute"/>
+          <parameter key="46" value="coconut.true.integer.attribute"/>
+          <parameter key="47" value="coriander.true.integer.attribute"/>
+          <parameter key="48" value="corn.true.integer.attribute"/>
+          <parameter key="49" value="cornmeal.true.integer.attribute"/>
+          <parameter key="50" value="cottage.true.integer.attribute"/>
+          <parameter key="51" value="crab.true.integer.attribute"/>
+          <parameter key="52" value="cream.true.integer.attribute"/>
+          <parameter key="53" value="cucumber.true.integer.attribute"/>
+          <parameter key="54" value="cucumbers.true.integer.attribute"/>
+          <parameter key="55" value="cumin.true.integer.attribute"/>
+          <parameter key="56" value="curry.true.integer.attribute"/>
+          <parameter key="57" value="dessert.true.integer.attribute"/>
+          <parameter key="58" value="dill.true.integer.attribute"/>
+          <parameter key="59" value="duck.true.integer.attribute"/>
+          <parameter key="60" value="egg.true.integer.attribute"/>
+          <parameter key="61" value="eggs.true.integer.attribute"/>
+          <parameter key="62" value="fennel.true.integer.attribute"/>
+          <parameter key="63" value="feta.true.integer.attribute"/>
+          <parameter key="64" value="fish.true.integer.attribute"/>
+          <parameter key="65" value="flank.true.integer.attribute"/>
+          <parameter key="66" value="flour.true.integer.attribute"/>
+          <parameter key="67" value="galangal.true.integer.attribute"/>
+          <parameter key="68" value="garlic.true.integer.attribute"/>
+          <parameter key="69" value="ginger.true.integer.attribute"/>
+          <parameter key="70" value="gnocchi.true.integer.attribute"/>
+          <parameter key="71" value="greek.true.integer.attribute"/>
+          <parameter key="72" value="greens.true.integer.attribute"/>
+          <parameter key="73" value="grill.true.integer.attribute"/>
+          <parameter key="74" value="grits.true.integer.attribute"/>
+          <parameter key="75" value="ground.true.integer.attribute"/>
+          <parameter key="76" value="groundnut.true.integer.attribute"/>
+          <parameter key="77" value="halves.true.integer.attribute"/>
+          <parameter key="78" value="ham.true.integer.attribute"/>
+          <parameter key="79" value="honey.true.integer.attribute"/>
+          <parameter key="80" value="iceberg.true.integer.attribute"/>
+          <parameter key="81" value="instant.true.integer.attribute"/>
+          <parameter key="82" value="jalapeno.true.integer.attribute"/>
+          <parameter key="83" value="juice.true.integer.attribute"/>
+          <parameter key="84" value="kalamata.true.integer.attribute"/>
+          <parameter key="85" value="lard.true.integer.attribute"/>
+          <parameter key="86" value="leaf.true.integer.attribute"/>
+          <parameter key="87" value="leaves.true.integer.attribute"/>
+          <parameter key="88" value="lemon.true.integer.attribute"/>
+          <parameter key="89" value="lemongrass.true.integer.attribute"/>
+          <parameter key="90" value="lettuce.true.integer.attribute"/>
+          <parameter key="91" value="lime.true.integer.attribute"/>
+          <parameter key="92" value="limes.true.integer.attribute"/>
+          <parameter key="93" value="maple.true.integer.attribute"/>
+          <parameter key="94" value="marinara.true.integer.attribute"/>
+          <parameter key="95" value="meat.true.integer.attribute"/>
+          <parameter key="96" value="medium.true.integer.attribute"/>
+          <parameter key="97" value="milk.true.integer.attribute"/>
+          <parameter key="98" value="mineral.true.integer.attribute"/>
+          <parameter key="99" value="mint.true.integer.attribute"/>
+          <parameter key="100" value="mix.true.integer.attribute"/>
+          <parameter key="101" value="mozzarella.true.integer.attribute"/>
+          <parameter key="102" value="mushrooms.true.integer.attribute"/>
+          <parameter key="103" value="napa.true.integer.attribute"/>
+          <parameter key="104" value="noodles.true.integer.attribute"/>
+          <parameter key="105" value="nutmeg.true.integer.attribute"/>
+          <parameter key="106" value="nuts.true.integer.attribute"/>
+          <parameter key="107" value="oelek.true.integer.attribute"/>
+          <parameter key="108" value="oil.true.integer.attribute"/>
+          <parameter key="109" value="olives.true.integer.attribute"/>
+          <parameter key="110" value="onion.true.integer.attribute"/>
+          <parameter key="111" value="onions.true.integer.attribute"/>
+          <parameter key="112" value="orange.true.integer.attribute"/>
+          <parameter key="113" value="oregano.true.integer.attribute"/>
+          <parameter key="114" value="oyster.true.integer.attribute"/>
+          <parameter key="115" value="paneer.true.integer.attribute"/>
+          <parameter key="116" value="paper.true.integer.attribute"/>
+          <parameter key="117" value="parmesan.true.integer.attribute"/>
+          <parameter key="118" value="parsley.true.integer.attribute"/>
+          <parameter key="119" value="pasta.true.integer.attribute"/>
+          <parameter key="120" value="paste.true.integer.attribute"/>
+          <parameter key="121" value="peanut.true.integer.attribute"/>
+          <parameter key="122" value="peanuts.true.integer.attribute"/>
+          <parameter key="123" value="peas.true.integer.attribute"/>
+          <parameter key="124" value="penne.true.integer.attribute"/>
+          <parameter key="125" value="pepper.true.integer.attribute"/>
+          <parameter key="126" value="pepperoni.true.integer.attribute"/>
+          <parameter key="127" value="peppers.true.integer.attribute"/>
+          <parameter key="128" value="pita.true.integer.attribute"/>
+          <parameter key="129" value="pod.true.integer.attribute"/>
+          <parameter key="130" value="pods.true.integer.attribute"/>
+          <parameter key="131" value="pork.true.integer.attribute"/>
+          <parameter key="132" value="powder.true.integer.attribute"/>
+          <parameter key="133" value="prawns.true.integer.attribute"/>
+          <parameter key="134" value="prunes.true.integer.attribute"/>
+          <parameter key="135" value="purpose.true.integer.attribute"/>
+          <parameter key="136" value="rabe.true.integer.attribute"/>
+          <parameter key="137" value="radishes.true.integer.attribute"/>
+          <parameter key="138" value="ramen.true.integer.attribute"/>
+          <parameter key="139" value="rice.true.integer.attribute"/>
+          <parameter key="140" value="roma.true.integer.attribute"/>
+          <parameter key="141" value="romaine.true.integer.attribute"/>
+          <parameter key="142" value="root.true.integer.attribute"/>
+          <parameter key="143" value="rosemary.true.integer.attribute"/>
+          <parameter key="144" value="round.true.integer.attribute"/>
+          <parameter key="145" value="salami.true.integer.attribute"/>
+          <parameter key="146" value="salt.true.integer.attribute"/>
+          <parameter key="147" value="sauce.true.integer.attribute"/>
+          <parameter key="148" value="sausage.true.integer.attribute"/>
+          <parameter key="149" value="scallion.true.integer.attribute"/>
+          <parameter key="150" value="scallions.true.integer.attribute"/>
+          <parameter key="151" value="sea.true.integer.attribute"/>
+          <parameter key="152" value="seed.true.integer.attribute"/>
+          <parameter key="153" value="seeds.true.integer.attribute"/>
+          <parameter key="154" value="sesame.true.integer.attribute"/>
+          <parameter key="155" value="shallot.true.integer.attribute"/>
+          <parameter key="156" value="shallots.true.integer.attribute"/>
+          <parameter key="157" value="sherry.true.integer.attribute"/>
+          <parameter key="158" value="shrimp.true.integer.attribute"/>
+          <parameter key="159" value="slices.true.integer.attribute"/>
+          <parameter key="160" value="snow.true.integer.attribute"/>
+          <parameter key="161" value="soup.true.integer.attribute"/>
+          <parameter key="162" value="soy.true.integer.attribute"/>
+          <parameter key="163" value="spice.true.integer.attribute"/>
+          <parameter key="164" value="spinach.true.integer.attribute"/>
+          <parameter key="165" value="sprouts.true.integer.attribute"/>
+          <parameter key="166" value="sriracha.true.integer.attribute"/>
+          <parameter key="167" value="stalks.true.integer.attribute"/>
+          <parameter key="168" value="star.true.integer.attribute"/>
+          <parameter key="169" value="steak.true.integer.attribute"/>
+          <parameter key="170" value="stock.true.integer.attribute"/>
+          <parameter key="171" value="sugar.true.integer.attribute"/>
+          <parameter key="172" value="sunflower.true.integer.attribute"/>
+          <parameter key="173" value="syrup.true.integer.attribute"/>
+          <parameter key="174" value="tahini.true.integer.attribute"/>
+          <parameter key="175" value="thyme.true.integer.attribute"/>
+          <parameter key="176" value="tofu.true.integer.attribute"/>
+          <parameter key="177" value="tomato.true.integer.attribute"/>
+          <parameter key="178" value="tomatoes.true.integer.attribute"/>
+          <parameter key="179" value="turkey.true.integer.attribute"/>
+          <parameter key="180" value="vanilla.true.integer.attribute"/>
+          <parameter key="181" value="vegetable.true.integer.attribute"/>
+          <parameter key="182" value="veggies.true.integer.attribute"/>
+          <parameter key="183" value="vermicelli.true.integer.attribute"/>
+          <parameter key="184" value="vietnamese.true.integer.attribute"/>
+          <parameter key="185" value="vinegar.true.integer.attribute"/>
+          <parameter key="186" value="virgin.true.integer.attribute"/>
+          <parameter key="187" value="walnut.true.integer.attribute"/>
+          <parameter key="188" value="water.true.integer.attribute"/>
+          <parameter key="189" value="wedges.true.integer.attribute"/>
+          <parameter key="190" value="wheat.true.integer.attribute"/>
+          <parameter key="191" value="wine.true.integer.attribute"/>
+          <parameter key="192" value="yeast.true.integer.attribute"/>
+          <parameter key="193" value="yogurt.true.integer.attribute"/>
+          <parameter key="194" value="zucchini.true.integer.attribute"/>
+          <parameter key="195" value="zucchinis.true.integer.attribute"/>
+          <parameter key="196" value="Link.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes (4)" width="90" x="179" y="187">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="Content-Length|Content-Type|Date|Link|Response-Code|Response-Message|URL"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="true"/>
+        <parameter key="include_special_attributes" value="true"/>
+      </operator>
+      <operator activated="true" class="rename" compatibility="9.6.000" expanded="true" height="82" name="Rename (2)" width="90" x="313" y="187">
+        <parameter key="old_name" value="Cuisine"/>
+        <parameter key="new_name" value="Länderküche"/>
+        <list key="rename_additional_attributes">
+          <parameter key="Recipe" value="Rezept"/>
+        </list>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (4)" width="90" x="447" y="187">
+        <parameter key="attribute_name" value="Rezept"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles">
+          <parameter key="Länderküche" value="label"/>
+        </list>
+      </operator>
+      <operator activated="true" class="numerical_to_binominal" compatibility="9.6.000" expanded="true" height="82" name="Numerical to Binominal (4)" width="90" x="581" y="187">
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="numeric"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="real"/>
+        <parameter key="block_type" value="value_series"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_series_end"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="min" value="0.0"/>
+        <parameter key="max" value="0.0"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store: 30 Testdaten" width="90" x="715" y="187">
+        <parameter key="repository_entry" value="Input_Testdaten_POS"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Optimize: 300 Trainingsdaten" width="90" x="179" y="340">
+        <parameter key="repository_entry" value="Input_Trainingsdaten_POS"/>
+      </operator>
+      <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="9.6.000" expanded="true" height="124" name="Optimize Parameters (Grid)" width="90" x="313" y="340">
+        <list key="parameters">
+          <parameter key="FPGROWTHMAX.min_support" value="[0.04;0.06;10;linear]"/>
+          <parameter key="ASSOCIATIONMAX.min_confidence" value="[0.10;0.20;10;linear]"/>
+        </list>
+        <parameter key="error_handling" value="fail on error"/>
+        <parameter key="log_performance" value="true"/>
+        <parameter key="log_all_criteria" value="true"/>
+        <parameter key="synchronize" value="false"/>
+        <parameter key="enable_parallel_execution" value="false"/>
+        <process expanded="true">
+          <operator activated="true" class="concurrency:fp_growth" compatibility="9.6.000" expanded="true" height="82" name="FPGROWTHMAX" width="90" x="45" y="34">
+            <parameter key="input_format" value="items in dummy coded columns"/>
+            <parameter key="item_separators" value="|"/>
+            <parameter key="use_quotes" value="false"/>
+            <parameter key="quotes_character" value="&quot;"/>
+            <parameter key="escape_character" value="\"/>
+            <parameter key="trim_item_names" value="true"/>
+            <parameter key="min_requirement" value="support"/>
+            <parameter key="min_support" value="0.06"/>
+            <parameter key="min_frequency" value="100"/>
+            <parameter key="min_items_per_itemset" value="2"/>
+            <parameter key="max_items_per_itemset" value="5"/>
+            <parameter key="max_number_of_itemsets" value="1000000"/>
+            <parameter key="find_min_number_of_itemsets" value="true"/>
+            <parameter key="min_number_of_itemsets" value="100"/>
+            <parameter key="max_number_of_retries" value="15"/>
+            <parameter key="requirement_decrease_factor" value="0.9"/>
+            <enumeration key="must_contain_list"/>
+          </operator>
+          <operator activated="true" class="create_association_rules" compatibility="9.6.000" expanded="true" height="82" name="ASSOCIATIONMAX" width="90" x="179" y="136">
+            <parameter key="criterion" value="confidence"/>
+            <parameter key="min_confidence" value="0.2"/>
+            <parameter key="min_criterion_value" value="0.8"/>
+            <parameter key="gain_theta" value="2.0"/>
+            <parameter key="laplace_k" value="1.0"/>
+          </operator>
+          <operator activated="true" class="apply_association_rules" compatibility="9.6.000" expanded="true" height="82" name="Apply Association Rules (2)" width="90" x="313" y="34">
+            <parameter key="confidence_aggregation_method" value="binary"/>
+          </operator>
+          <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes (3)" width="90" x="45" y="391">
+            <parameter key="attribute_filter_type" value="value_type"/>
+            <parameter key="attribute" value=""/>
+            <parameter key="attributes" value=""/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="true"/>
+            <parameter key="except_value_type" value="binominal"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+          </operator>
+          <operator activated="true" class="concurrency:loop_attributes" compatibility="9.6.000" expanded="true" height="82" name="Loop Attributes (2)" width="90" x="179" y="391">
+            <parameter key="attribute_filter_type" value="value_type"/>
+            <parameter key="attribute" value=""/>
+            <parameter key="attributes" value=""/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="real"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="true"/>
+            <parameter key="attribute_name_macro" value="loop_attribute"/>
+            <parameter key="reuse_results" value="true"/>
+            <parameter key="enable_parallel_execution" value="true"/>
+            <process expanded="true">
+              <operator activated="true" class="extract_macro" compatibility="9.6.000" expanded="true" height="68" name="Extract Macro (2)" width="90" x="112" y="34">
+                <parameter key="macro" value="loop_attributes"/>
+                <parameter key="macro_type" value="number_of_attributes"/>
+                <parameter key="statistics" value="average"/>
+                <parameter key="attribute_name" value=""/>
+                <list key="additional_macros"/>
+              </operator>
+              <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (3)" width="90" x="380" y="34">
+                <parameter key="attribute_name" value="%{loop_attribute}"/>
+                <parameter key="target_role" value="regular"/>
+                <list key="set_additional_roles"/>
+              </operator>
+              <connect from_port="input 1" to_op="Extract Macro (2)" to_port="example set"/>
+              <connect from_op="Extract Macro (2)" from_port="example set" to_op="Set Role (3)" to_port="example set input"/>
+              <connect from_op="Set Role (3)" from_port="example set output" to_port="output 1"/>
+              <portSpacing port="source_input 1" spacing="0"/>
+              <portSpacing port="source_input 2" spacing="0"/>
+              <portSpacing port="sink_output 1" spacing="0"/>
+              <portSpacing port="sink_output 2" spacing="0"/>
+            </process>
+          </operator>
+          <operator activated="true" class="numerical_to_binominal" compatibility="9.6.000" expanded="true" height="82" name="Numerical to Binominal (3)" width="90" x="313" y="391">
+            <parameter key="attribute_filter_type" value="value_type"/>
+            <parameter key="attribute" value=""/>
+            <parameter key="attributes" value=""/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="real"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="real"/>
+            <parameter key="block_type" value="value_series"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_series_end"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <parameter key="min" value="0.0"/>
+            <parameter key="max" value="0.0"/>
+          </operator>
+          <operator activated="true" class="concurrency:parallel_random_forest" compatibility="9.6.000" expanded="true" height="103" name="Random Forest (2)" width="90" x="447" y="391">
+            <parameter key="number_of_trees" value="100"/>
+            <parameter key="criterion" value="gain_ratio"/>
+            <parameter key="maximal_depth" value="-1"/>
+            <parameter key="apply_pruning" value="false"/>
+            <parameter key="confidence" value="0.1"/>
+            <parameter key="apply_prepruning" value="false"/>
+            <parameter key="minimal_gain" value="0.01"/>
+            <parameter key="minimal_leaf_size" value="2"/>
+            <parameter key="minimal_size_for_split" value="4"/>
+            <parameter key="number_of_prepruning_alternatives" value="3"/>
+            <parameter key="random_splits" value="false"/>
+            <parameter key="guess_subset_ratio" value="true"/>
+            <parameter key="subset_ratio" value="0.2"/>
+            <parameter key="voting_strategy" value="confidence vote"/>
+            <parameter key="use_local_random_seed" value="false"/>
+            <parameter key="local_random_seed" value="1992"/>
+            <parameter key="enable_parallel_execution" value="true"/>
+          </operator>
+          <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model" width="90" x="581" y="391">
+            <list key="application_parameters"/>
+            <parameter key="create_view" value="false"/>
+          </operator>
+          <operator activated="true" class="performance_classification" compatibility="9.6.000" expanded="true" height="82" name="Performance (2)" width="90" x="715" y="34">
+            <parameter key="main_criterion" value="accuracy"/>
+            <parameter key="accuracy" value="true"/>
+            <parameter key="classification_error" value="false"/>
+            <parameter key="kappa" value="false"/>
+            <parameter key="weighted_mean_recall" value="false"/>
+            <parameter key="weighted_mean_precision" value="false"/>
+            <parameter key="spearman_rho" value="false"/>
+            <parameter key="kendall_tau" value="false"/>
+            <parameter key="absolute_error" value="false"/>
+            <parameter key="relative_error" value="false"/>
+            <parameter key="relative_error_lenient" value="false"/>
+            <parameter key="relative_error_strict" value="false"/>
+            <parameter key="normalized_absolute_error" value="false"/>
+            <parameter key="root_mean_squared_error" value="false"/>
+            <parameter key="root_relative_squared_error" value="false"/>
+            <parameter key="squared_error" value="false"/>
+            <parameter key="correlation" value="false"/>
+            <parameter key="squared_correlation" value="false"/>
+            <parameter key="cross-entropy" value="false"/>
+            <parameter key="margin" value="false"/>
+            <parameter key="soft_margin_loss" value="false"/>
+            <parameter key="logistic_loss" value="false"/>
+            <parameter key="skip_undefined_labels" value="true"/>
+            <parameter key="use_example_weights" value="true"/>
+            <list key="class_weights"/>
+          </operator>
+          <connect from_port="input 1" to_op="FPGROWTHMAX" to_port="example set"/>
+          <connect from_op="FPGROWTHMAX" from_port="example set" to_op="Apply Association Rules (2)" to_port="example set"/>
+          <connect from_op="FPGROWTHMAX" from_port="frequent sets" to_op="ASSOCIATIONMAX" to_port="item sets"/>
+          <connect from_op="ASSOCIATIONMAX" from_port="rules" to_op="Apply Association Rules (2)" to_port="association rules"/>
+          <connect from_op="Apply Association Rules (2)" from_port="example set" to_op="Select Attributes (3)" to_port="example set input"/>
+          <connect from_op="Select Attributes (3)" from_port="example set output" to_op="Loop Attributes (2)" to_port="input 1"/>
+          <connect from_op="Loop Attributes (2)" from_port="output 1" to_op="Numerical to Binominal (3)" to_port="example set input"/>
+          <connect from_op="Numerical to Binominal (3)" from_port="example set output" to_op="Random Forest (2)" to_port="training set"/>
+          <connect from_op="Random Forest (2)" from_port="model" to_op="Apply Model" to_port="model"/>
+          <connect from_op="Random Forest (2)" from_port="exampleSet" to_op="Apply Model" to_port="unlabelled data"/>
+          <connect from_op="Apply Model" from_port="labelled data" to_op="Performance (2)" to_port="labelled data"/>
+          <connect from_op="Performance (2)" from_port="performance" to_port="performance"/>
+          <portSpacing port="source_input 1" spacing="0"/>
+          <portSpacing port="source_input 2" spacing="0"/>
+          <portSpacing port="sink_performance" spacing="0"/>
+          <portSpacing port="sink_model" spacing="0"/>
+          <portSpacing port="sink_output 1" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="set_parameters" compatibility="9.6.000" expanded="true" height="82" name="Set Parameters" width="90" x="447" y="340">
+        <list key="name_map">
+          <parameter key="FPGROWTHMAX" value="FPGROWTH"/>
+          <parameter key="ASSOCIATIONMAX" value="ASSOCIATION"/>
+        </list>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Model: 300 Trainingsdaten" width="90" x="313" y="544">
+        <parameter key="repository_entry" value="Input_Trainingsdaten_POS"/>
+      </operator>
+      <operator activated="true" class="concurrency:fp_growth" compatibility="9.6.000" expanded="true" height="82" name="FPGROWTH" width="90" x="447" y="544">
+        <parameter key="input_format" value="items in dummy coded columns"/>
+        <parameter key="item_separators" value="|"/>
+        <parameter key="use_quotes" value="false"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="trim_item_names" value="true"/>
+        <parameter key="min_requirement" value="support"/>
+        <parameter key="min_support" value="0.042"/>
+        <parameter key="min_frequency" value="100"/>
+        <parameter key="min_items_per_itemset" value="1"/>
+        <parameter key="max_items_per_itemset" value="0"/>
+        <parameter key="max_number_of_itemsets" value="1000000"/>
+        <parameter key="find_min_number_of_itemsets" value="false"/>
+        <parameter key="min_number_of_itemsets" value="44"/>
+        <parameter key="max_number_of_retries" value="15"/>
+        <parameter key="requirement_decrease_factor" value="0.9"/>
+        <enumeration key="must_contain_list"/>
+      </operator>
+      <operator activated="true" class="create_association_rules" compatibility="9.6.000" expanded="true" height="82" name="ASSOCIATION" width="90" x="581" y="544">
+        <parameter key="criterion" value="confidence"/>
+        <parameter key="min_confidence" value="0.15000000000000002"/>
+        <parameter key="min_criterion_value" value="1.5"/>
+        <parameter key="gain_theta" value="2.0"/>
+        <parameter key="laplace_k" value="1.0"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Apply: 30 Testdaten" width="90" x="447" y="697">
+        <parameter key="repository_entry" value="Input_Testdaten_POS"/>
+      </operator>
+      <operator activated="true" class="apply_association_rules" compatibility="9.6.000" expanded="true" height="82" name="Apply Association Rules" width="90" x="581" y="697">
+        <parameter key="confidence_aggregation_method" value="binary"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes (2)" width="90" x="447" y="850">
+        <parameter key="attribute_filter_type" value="value_type"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="true"/>
+        <parameter key="except_value_type" value="binominal"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:loop_attributes" compatibility="9.6.000" expanded="true" height="82" name="Loop Attributes" width="90" x="581" y="850">
+        <parameter key="attribute_filter_type" value="value_type"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="real"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="true"/>
+        <parameter key="attribute_name_macro" value="loop_attribute"/>
+        <parameter key="reuse_results" value="true"/>
+        <parameter key="enable_parallel_execution" value="true"/>
+        <process expanded="true">
+          <operator activated="true" class="extract_macro" compatibility="9.6.000" expanded="true" height="68" name="Extract Macro" width="90" x="112" y="34">
+            <parameter key="macro" value="loop_attributes"/>
+            <parameter key="macro_type" value="number_of_attributes"/>
+            <parameter key="statistics" value="average"/>
+            <parameter key="attribute_name" value=""/>
+            <list key="additional_macros"/>
+          </operator>
+          <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (2)" width="90" x="380" y="34">
+            <parameter key="attribute_name" value="%{loop_attribute}"/>
+            <parameter key="target_role" value="regular"/>
+            <list key="set_additional_roles"/>
+          </operator>
+          <connect from_port="input 1" to_op="Extract Macro" to_port="example set"/>
+          <connect from_op="Extract Macro" from_port="example set" to_op="Set Role (2)" to_port="example set input"/>
+          <connect from_op="Set Role (2)" from_port="example set output" to_port="output 1"/>
+          <portSpacing port="source_input 1" spacing="0"/>
+          <portSpacing port="source_input 2" spacing="0"/>
+          <portSpacing port="sink_output 1" spacing="0"/>
+          <portSpacing port="sink_output 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="numerical_to_binominal" compatibility="9.6.000" expanded="true" height="82" name="Numerical to Binominal (2)" width="90" x="715" y="850">
+        <parameter key="attribute_filter_type" value="value_type"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="real"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="real"/>
+        <parameter key="block_type" value="value_series"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_series_end"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="min" value="0.0"/>
+        <parameter key="max" value="0.0"/>
+      </operator>
+      <operator activated="true" class="concurrency:parallel_random_forest" compatibility="9.6.000" expanded="true" height="103" name="Random Forest" width="90" x="581" y="1003">
+        <parameter key="number_of_trees" value="100"/>
+        <parameter key="criterion" value="gain_ratio"/>
+        <parameter key="maximal_depth" value="-1"/>
+        <parameter key="apply_pruning" value="false"/>
+        <parameter key="confidence" value="0.1"/>
+        <parameter key="apply_prepruning" value="false"/>
+        <parameter key="minimal_gain" value="0.01"/>
+        <parameter key="minimal_leaf_size" value="2"/>
+        <parameter key="minimal_size_for_split" value="4"/>
+        <parameter key="number_of_prepruning_alternatives" value="3"/>
+        <parameter key="random_splits" value="false"/>
+        <parameter key="guess_subset_ratio" value="true"/>
+        <parameter key="subset_ratio" value="0.2"/>
+        <parameter key="voting_strategy" value="confidence vote"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="enable_parallel_execution" value="true"/>
+      </operator>
+      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (6)" width="90" x="715" y="1003">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="performance_classification" compatibility="9.6.000" expanded="true" height="82" name="Random Forest P." width="90" x="849" y="1003">
+        <parameter key="main_criterion" value="accuracy"/>
+        <parameter key="accuracy" value="true"/>
+        <parameter key="classification_error" value="false"/>
+        <parameter key="kappa" value="false"/>
+        <parameter key="weighted_mean_recall" value="true"/>
+        <parameter key="weighted_mean_precision" value="true"/>
+        <parameter key="spearman_rho" value="false"/>
+        <parameter key="kendall_tau" value="false"/>
+        <parameter key="absolute_error" value="false"/>
+        <parameter key="relative_error" value="false"/>
+        <parameter key="relative_error_lenient" value="false"/>
+        <parameter key="relative_error_strict" value="false"/>
+        <parameter key="normalized_absolute_error" value="false"/>
+        <parameter key="root_mean_squared_error" value="false"/>
+        <parameter key="root_relative_squared_error" value="false"/>
+        <parameter key="squared_error" value="false"/>
+        <parameter key="correlation" value="false"/>
+        <parameter key="squared_correlation" value="true"/>
+        <parameter key="cross-entropy" value="false"/>
+        <parameter key="margin" value="false"/>
+        <parameter key="soft_margin_loss" value="false"/>
+        <parameter key="logistic_loss" value="false"/>
+        <parameter key="skip_undefined_labels" value="true"/>
+        <parameter key="use_example_weights" value="true"/>
+        <list key="class_weights"/>
+      </operator>
+      <connect from_op="Load Offline: 300 Daten Training" from_port="output" to_op="Select Attributes" to_port="example set input"/>
+      <connect from_op="Select Attributes" from_port="example set output" to_op="Rename" to_port="example set input"/>
+      <connect from_op="Rename" from_port="example set output" to_op="Set Role" to_port="example set input"/>
+      <connect from_op="Set Role" from_port="example set output" to_op="Numerical to Binominal" to_port="example set input"/>
+      <connect from_op="Numerical to Binominal" from_port="example set output" to_op="Store: 300 Trainingsdaten" to_port="input"/>
+      <connect from_op="Load Offline: 30 Daten Test" from_port="output" to_op="Select Attributes (4)" to_port="example set input"/>
+      <connect from_op="Select Attributes (4)" from_port="example set output" to_op="Rename (2)" to_port="example set input"/>
+      <connect from_op="Rename (2)" from_port="example set output" to_op="Set Role (4)" to_port="example set input"/>
+      <connect from_op="Set Role (4)" from_port="example set output" to_op="Numerical to Binominal (4)" to_port="example set input"/>
+      <connect from_op="Numerical to Binominal (4)" from_port="example set output" to_op="Store: 30 Testdaten" to_port="input"/>
+      <connect from_op="Optimize: 300 Trainingsdaten" from_port="output" to_op="Optimize Parameters (Grid)" to_port="input 1"/>
+      <connect from_op="Optimize Parameters (Grid)" from_port="parameter set" to_op="Set Parameters" to_port="parameter set"/>
+      <connect from_op="Model: 300 Trainingsdaten" from_port="output" to_op="FPGROWTH" to_port="example set"/>
+      <connect from_op="FPGROWTH" from_port="frequent sets" to_op="ASSOCIATION" to_port="item sets"/>
+      <connect from_op="ASSOCIATION" from_port="rules" to_op="Apply Association Rules" to_port="association rules"/>
+      <connect from_op="Apply: 30 Testdaten" from_port="output" to_op="Apply Association Rules" to_port="example set"/>
+      <connect from_op="Apply Association Rules" from_port="example set" to_op="Select Attributes (2)" to_port="example set input"/>
+      <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Loop Attributes" to_port="input 1"/>
+      <connect from_op="Loop Attributes" from_port="output 1" to_op="Numerical to Binominal (2)" to_port="example set input"/>
+      <connect from_op="Numerical to Binominal (2)" from_port="example set output" to_op="Random Forest" to_port="training set"/>
+      <connect from_op="Random Forest" from_port="model" to_op="Apply Model (6)" to_port="model"/>
+      <connect from_op="Random Forest" from_port="exampleSet" to_op="Apply Model (6)" to_port="unlabelled data"/>
+      <connect from_op="Apply Model (6)" from_port="labelled data" to_op="Random Forest P." to_port="labelled data"/>
+      <connect from_op="Random Forest P." from_port="performance" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <description align="left" color="green" colored="true" height="138" resized="true" width="821" x="10" y="10">&lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br/&gt;&lt;br&gt;Preprocessing: 300 Trainingsdaten</description>
+      <description align="left" color="green" colored="true" height="141" resized="true" width="822" x="10" y="162">&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Preprocessing: 30 Testdaten</description>
+      <description align="left" color="orange" colored="true" height="192" resized="true" width="425" x="151" y="311">&lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; Optimize Loop: Maximierung der Classifier-Performance (Accuracy)</description>
+      <description align="left" color="purple" colored="true" height="138" resized="true" width="499" x="242" y="519">&lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; Build Model with the optimal Parameters - 300 Trainingsdaten</description>
+      <description align="left" color="purple" colored="true" height="140" resized="true" width="476" x="262" y="670">&lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; Application of the optimal Model - 30 Testdaten (unseen)</description>
+      <description align="left" color="red" colored="true" height="141" resized="true" width="571" x="326" y="829">&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Transform Association-Output to Classification-Input</description>
+      <description align="left" color="blue" colored="true" height="159" resized="true" width="570" x="457" y="983">&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Random Forest Classifier to predict Cuisine</description>
+    </process>
+  </operator>
+</process>
