@@ -1357,8 +1357,12 @@
       <connect from_op="Text Vectorization (2)" from_port="example set output" to_op="Remove Duplicates (2)" to_port="example set input"/>
       <connect from_op="Remove Duplicates (2)" from_port="example set output" to_op="Top 10 vietnamese" to_port="example set input"/>
       <connect from_op="Top 10 vietnamese" from_port="example set output" to_op="Write CSV (2)" to_port="input"/>
+      <connect from_op="Write CSV" from_port="through" to_port="result 1"/>
+      <connect from_op="Write CSV (2)" from_port="through" to_port="result 2"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
     </process>
   </operator>
 </process>
