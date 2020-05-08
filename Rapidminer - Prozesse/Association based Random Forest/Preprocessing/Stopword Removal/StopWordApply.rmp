@@ -40,7 +40,7 @@
         <parameter key="data_management" value="auto"/>
       </operator>
       <operator activated="true" class="read_excel" compatibility="9.6.000" expanded="true" height="68" name="Read Excel" width="90" x="45" y="34">
-        <parameter key="excel_file" value="D:\DataScience\Big_Data_Architectures\StopWordRemoval\Data\Ingredients_Training_Recipes_4_gram_own_stem.xlsx"/>
+        <parameter key="excel_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output POS + STEM\Ingredients_Training_Recipes_POS_NN_STEM.xlsx"/>
         <parameter key="sheet_selection" value="sheet number"/>
         <parameter key="sheet_number" value="1"/>
         <parameter key="imported_cell_range" value="A1"/>
@@ -1062,7 +1062,7 @@
         <parameter key="include_special_attributes" value="true"/>
       </operator>
       <operator activated="true" class="write_excel" compatibility="9.6.000" expanded="true" height="103" name="Write Excel" width="90" x="916" y="34">
-        <parameter key="excel_file" value="D:\DataScience\Big_Data_Architectures\StopWordRemoval\Ingredients_Training_Recipes_4_gram_own_stem.xlsx"/>
+        <parameter key="excel_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output StopWord\Ingredients_Training_Recipes_4_gram_own_stem.xlsx"/>
         <parameter key="file_format" value="xlsx"/>
         <enumeration key="sheet_names"/>
         <parameter key="sheet_name" value="RapidMiner Data"/>
