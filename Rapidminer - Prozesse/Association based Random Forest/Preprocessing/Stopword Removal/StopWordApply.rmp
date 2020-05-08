@@ -13,7 +13,7 @@
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
       <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV (2)" width="90" x="45" y="136">
-        <parameter key="csv_file" value="C:\Users\Corny\Desktop\test_StopWords.csv"/>
+        <parameter key="csv_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output StopWord\StopWords.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
         <parameter key="use_quotes" value="true"/>
@@ -40,7 +40,7 @@
         <parameter key="data_management" value="auto"/>
       </operator>
       <operator activated="true" class="read_excel" compatibility="9.6.000" expanded="true" height="68" name="Read Excel" width="90" x="45" y="34">
-        <parameter key="excel_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output POS + STEM\Ingredients_Training_Recipes_POS_NN_STEM.xlsx"/>
+        <parameter key="excel_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output 4-Gram without Plural\Ingredients_Training_Recipes_4_gram_own_stem.xlsx"/>
         <parameter key="sheet_selection" value="sheet number"/>
         <parameter key="sheet_number" value="1"/>
         <parameter key="imported_cell_range" value="A1"/>
@@ -1047,7 +1047,7 @@
         <enumeration key="R_LIBS_paths"/>
       </operator>
       <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (2)" width="90" x="581" y="34"/>
-      <operator activated="true" breakpoints="after" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes" width="90" x="715" y="34">
+      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes" width="90" x="715" y="34">
         <parameter key="attribute_filter_type" value="subset"/>
         <parameter key="attribute" value="id"/>
         <parameter key="attributes" value="id"/>
