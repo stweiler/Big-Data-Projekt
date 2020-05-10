@@ -878,7 +878,7 @@
       <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Optimize: 300 Trainingsdaten" width="90" x="179" y="340">
         <parameter key="repository_entry" value="Input_Trainingsdaten_POS"/>
       </operator>
-      <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="9.6.000" expanded="true" height="124" name="Optimize Parameters (Grid)" width="90" x="313" y="340">
+      <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="9.6.000" expanded="true" height="145" name="Optimize Parameters (Grid)" width="90" x="313" y="340">
         <list key="parameters">
           <parameter key="FPGROWTHMAX.min_support" value="[0.04;0.06;10;linear]"/>
           <parameter key="ASSOCIATIONMAX.min_confidence" value="[0.10;0.20;10;linear]"/>
@@ -1009,7 +1009,7 @@
             <list key="application_parameters"/>
             <parameter key="create_view" value="false"/>
           </operator>
-          <operator activated="true" class="performance_classification" compatibility="9.6.000" expanded="true" height="82" name="Performance (2)" width="90" x="715" y="34">
+          <operator activated="true" class="performance_classification" compatibility="9.6.000" expanded="true" height="82" name="Performance (2)" width="90" x="514" y="34">
             <parameter key="main_criterion" value="accuracy"/>
             <parameter key="accuracy" value="true"/>
             <parameter key="classification_error" value="false"/>
@@ -1036,6 +1036,7 @@
             <parameter key="use_example_weights" value="true"/>
             <list key="class_weights"/>
           </operator>
+          <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="103" name="Multiply" width="90" x="648" y="34"/>
           <connect from_port="input 1" to_op="FPGROWTHMAX" to_port="example set"/>
           <connect from_op="FPGROWTHMAX" from_port="example set" to_op="Apply Association Rules (2)" to_port="example set"/>
           <connect from_op="FPGROWTHMAX" from_port="frequent sets" to_op="ASSOCIATIONMAX" to_port="item sets"/>
@@ -1047,12 +1048,15 @@
           <connect from_op="Random Forest (2)" from_port="model" to_op="Apply Model" to_port="model"/>
           <connect from_op="Random Forest (2)" from_port="exampleSet" to_op="Apply Model" to_port="unlabelled data"/>
           <connect from_op="Apply Model" from_port="labelled data" to_op="Performance (2)" to_port="labelled data"/>
-          <connect from_op="Performance (2)" from_port="performance" to_port="performance"/>
+          <connect from_op="Performance (2)" from_port="performance" to_op="Multiply" to_port="input"/>
+          <connect from_op="Multiply" from_port="output 1" to_port="performance"/>
+          <connect from_op="Multiply" from_port="output 2" to_port="output 1"/>
           <portSpacing port="source_input 1" spacing="0"/>
           <portSpacing port="source_input 2" spacing="0"/>
           <portSpacing port="sink_performance" spacing="0"/>
           <portSpacing port="sink_model" spacing="0"/>
           <portSpacing port="sink_output 1" spacing="0"/>
+          <portSpacing port="sink_output 2" spacing="0"/>
         </process>
       </operator>
       <operator activated="true" class="set_parameters" compatibility="9.6.000" expanded="true" height="82" name="Set Parameters" width="90" x="447" y="340">
@@ -1226,6 +1230,7 @@
       <connect from_op="Numerical to Binominal (4)" from_port="example set output" to_op="Store: 30 Testdaten" to_port="input"/>
       <connect from_op="Optimize: 300 Trainingsdaten" from_port="output" to_op="Optimize Parameters (Grid)" to_port="input 1"/>
       <connect from_op="Optimize Parameters (Grid)" from_port="parameter set" to_op="Set Parameters" to_port="parameter set"/>
+      <connect from_op="Optimize Parameters (Grid)" from_port="output 1" to_port="result 2"/>
       <connect from_op="Model: 300 Trainingsdaten" from_port="output" to_op="FPGROWTH" to_port="example set"/>
       <connect from_op="FPGROWTH" from_port="frequent sets" to_op="ASSOCIATION" to_port="item sets"/>
       <connect from_op="ASSOCIATION" from_port="rules" to_op="Apply Association Rules" to_port="association rules"/>
@@ -1241,6 +1246,7 @@
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
       <description align="left" color="green" colored="true" height="138" resized="true" width="821" x="10" y="10">&lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br/&gt;&lt;br&gt;Preprocessing: 300 Trainingsdaten</description>
       <description align="left" color="green" colored="true" height="141" resized="true" width="822" x="10" y="162">&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Preprocessing: 30 Testdaten</description>
       <description align="left" color="orange" colored="true" height="192" resized="true" width="425" x="151" y="311">&lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; Optimize Loop: Maximierung der Classifier-Performance (Accuracy)</description>
