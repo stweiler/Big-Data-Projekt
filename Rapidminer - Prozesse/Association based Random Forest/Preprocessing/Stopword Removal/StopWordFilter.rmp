@@ -1051,7 +1051,7 @@
         <parameter key="target_role" value="id"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="rename_by_replacing" compatibility="9.6.000" expanded="true" height="82" name="Rename by Replacing" width="90" x="45" y="136">
+      <operator activated="true" class="rename_by_replacing" compatibility="9.6.000" expanded="true" height="82" name="Rename by Replacing" width="90" x="581" y="34">
         <parameter key="attribute_filter_type" value="all"/>
         <parameter key="attribute" value=""/>
         <parameter key="attributes" value=""/>
@@ -1066,7 +1066,7 @@
         <parameter key="include_special_attributes" value="false"/>
         <parameter key="replace_what" value=".*?\("/>
       </operator>
-      <operator activated="true" class="rename_by_replacing" compatibility="9.6.000" expanded="true" height="82" name="Rename by Replacing (2)" width="90" x="179" y="136">
+      <operator activated="true" class="rename_by_replacing" compatibility="9.6.000" expanded="true" height="82" name="Rename by Replacing (2)" width="90" x="715" y="34">
         <parameter key="attribute_filter_type" value="all"/>
         <parameter key="attribute" value=""/>
         <parameter key="attributes" value=""/>
@@ -1081,70 +1081,32 @@
         <parameter key="include_special_attributes" value="false"/>
         <parameter key="replace_what" value="\)"/>
       </operator>
-      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="208" name="Multiply" width="90" x="447" y="289"/>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (8)" width="90" x="715" y="646">
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="103" name="Multiply" width="90" x="45" y="238"/>
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (4)" width="90" x="179" y="238">
         <parameter key="attribute_name" value="id"/>
         <parameter key="target_role" value="label"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (7)" width="90" x="715" y="544">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="label"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (6)" width="90" x="715" y="391">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="label"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role" width="90" x="715" y="136">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="label"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (4)" width="90" x="715" y="34">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="label"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="weight_by_deviation" compatibility="9.6.000" expanded="true" height="82" name="Weight by Deviation (6)" width="90" x="849" y="646">
+      <operator activated="true" class="weight_by_deviation" compatibility="9.6.000" expanded="true" height="82" name="Weight by Deviation" width="90" x="313" y="238">
         <parameter key="normalize_weights" value="false"/>
         <parameter key="sort_weights" value="true"/>
-        <parameter key="sort_direction" value="ascending"/>
+        <parameter key="sort_direction" value="descending"/>
         <parameter key="normalize" value="none"/>
       </operator>
-      <operator activated="true" class="weight_by_deviation" compatibility="9.6.000" expanded="true" height="82" name="Weight by Deviation (5)" width="90" x="849" y="544">
-        <parameter key="normalize_weights" value="false"/>
-        <parameter key="sort_weights" value="true"/>
-        <parameter key="sort_direction" value="ascending"/>
-        <parameter key="normalize" value="none"/>
-      </operator>
-      <operator activated="true" class="weight_by_deviation" compatibility="9.6.000" expanded="true" height="82" name="Weight by Deviation (4)" width="90" x="849" y="391">
-        <parameter key="normalize_weights" value="false"/>
-        <parameter key="sort_weights" value="true"/>
-        <parameter key="sort_direction" value="ascending"/>
-        <parameter key="normalize" value="none"/>
-      </operator>
-      <operator activated="true" class="weight_by_deviation" compatibility="9.6.000" expanded="true" height="82" name="Weight by Deviation (2)" width="90" x="849" y="136">
-        <parameter key="normalize_weights" value="false"/>
-        <parameter key="sort_weights" value="true"/>
-        <parameter key="sort_direction" value="ascending"/>
-        <parameter key="normalize" value="none"/>
-      </operator>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (11)" width="90" x="715" y="850">
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (11)" width="90" x="313" y="391">
         <parameter key="attribute_name" value="Cuisine"/>
         <parameter key="target_role" value="id"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose" width="90" x="849" y="850"/>
-      <operator activated="true" class="r_scripting:execute_r" compatibility="9.6.000" expanded="true" height="103" name="Execute R" width="90" x="983" y="850">
-        <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;rm_main = function(data)&#10;{&#10;    data$yn &lt;- apply(data[,0:5], 1, function(r) { all(r &gt; 1)}) &#10;    return(data)&#10;}&#10;"/>
+      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose" width="90" x="447" y="391"/>
+      <operator activated="true" class="r_scripting:execute_r" compatibility="9.6.000" expanded="true" height="103" name="Execute R" width="90" x="581" y="391">
+        <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;rm_main = function(data)&#10;{&#10;    data$yn &lt;- apply(data[,0:5], 1, function(r) { all(r &gt; 0)}) &#10;    return(data)&#10;}&#10;"/>
         <parameter key="use_default_R" value="true"/>
         <parameter key="Rscript_executable" value="C:/R/Rscript.exe"/>
         <parameter key="use_default_R_LIBS_paths" value="true"/>
         <enumeration key="R_LIBS_paths"/>
       </operator>
-      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (7)" width="90" x="1117" y="850">
+      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (7)" width="90" x="715" y="391">
         <parameter key="parameter_expression" value=""/>
         <parameter key="condition_class" value="custom_filters"/>
         <parameter key="invert_filter" value="false"/>
@@ -1154,116 +1116,447 @@
         <parameter key="filters_logic_and" value="true"/>
         <parameter key="filters_check_metadata" value="true"/>
       </operator>
-      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="187" name="Multiply (2)" width="90" x="1251" y="850"/>
-      <operator activated="true" class="select_by_weights" compatibility="9.6.000" expanded="true" height="103" name="Croatian" width="90" x="983" y="136">
+      <operator activated="true" class="select_by_weights" compatibility="9.6.000" expanded="true" height="103" name="select by weights" width="90" x="447" y="238">
         <parameter key="weight_relation" value="greater"/>
         <parameter key="weight" value="0.6"/>
-        <parameter key="k" value="10"/>
-        <parameter key="p" value="0.5"/>
-        <parameter key="deselect_unknown" value="true"/>
-        <parameter key="use_absolute_weights" value="true"/>
-      </operator>
-      <operator activated="true" class="select_by_weights" compatibility="9.6.000" expanded="true" height="103" name="Greek" width="90" x="983" y="391">
-        <parameter key="weight_relation" value="greater"/>
-        <parameter key="weight" value="0.6"/>
-        <parameter key="k" value="10"/>
-        <parameter key="p" value="0.5"/>
-        <parameter key="deselect_unknown" value="true"/>
-        <parameter key="use_absolute_weights" value="true"/>
-      </operator>
-      <operator activated="true" class="select_by_weights" compatibility="9.6.000" expanded="true" height="103" name="Italian" width="90" x="983" y="544">
-        <parameter key="weight_relation" value="greater"/>
-        <parameter key="weight" value="0.6"/>
-        <parameter key="k" value="10"/>
-        <parameter key="p" value="0.5"/>
-        <parameter key="deselect_unknown" value="true"/>
-        <parameter key="use_absolute_weights" value="true"/>
-      </operator>
-      <operator activated="true" class="select_by_weights" compatibility="9.6.000" expanded="true" height="103" name="Thai" width="90" x="983" y="646">
-        <parameter key="weight_relation" value="greater"/>
-        <parameter key="weight" value="0.6"/>
-        <parameter key="k" value="10"/>
-        <parameter key="p" value="0.5"/>
-        <parameter key="deselect_unknown" value="true"/>
-        <parameter key="use_absolute_weights" value="true"/>
-      </operator>
-      <operator activated="true" class="weight_by_deviation" compatibility="9.6.000" expanded="true" height="82" name="Weight by Deviation" width="90" x="849" y="34">
-        <parameter key="normalize_weights" value="false"/>
-        <parameter key="sort_weights" value="true"/>
-        <parameter key="sort_direction" value="ascending"/>
-        <parameter key="normalize" value="none"/>
-      </operator>
-      <operator activated="true" class="select_by_weights" compatibility="9.6.000" expanded="true" height="103" name="Vietnamese" width="90" x="983" y="34">
-        <parameter key="weight_relation" value="greater"/>
-        <parameter key="weight" value="9.0"/>
         <parameter key="k" value="10"/>
         <parameter key="p" value="0.5"/>
         <parameter key="deselect_unknown" value="true"/>
         <parameter key="use_absolute_weights" value="false"/>
       </operator>
-      <operator activated="true" class="generate_attributes" compatibility="9.6.000" expanded="true" height="82" name="Generate Attributes" width="90" x="1117" y="34">
+      <operator activated="true" class="generate_attributes" compatibility="9.6.000" expanded="true" height="82" name="Generate Attributes" width="90" x="581" y="238">
         <list key="function_descriptions">
           <parameter key="yn" value="false"/>
         </list>
         <parameter key="keep_all" value="true"/>
       </operator>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (2)" width="90" x="1251" y="34"/>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (5)" width="90" x="715" y="289">
+      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (2)" width="90" x="715" y="238"/>
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (9)" width="90" x="849" y="238">
+        <parameter key="attribute_name" value="id"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="intersect" compatibility="9.6.000" expanded="true" height="82" name="Intersect" width="90" x="983" y="238"/>
+      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (3)" width="90" x="1117" y="238"/>
+      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples" width="90" x="1251" y="238">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list">
+          <parameter key="filters_entry_key" value="id.equals.att_1"/>
+          <parameter key="filters_entry_key" value="id.equals.att_2"/>
+          <parameter key="filters_entry_key" value="id.equals.att_3"/>
+          <parameter key="filters_entry_key" value="id.equals.att_4"/>
+          <parameter key="filters_entry_key" value="id.equals.att_5"/>
+          <parameter key="filters_entry_key" value="id.equals.att_6"/>
+        </list>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Training Data" width="90" x="1385" y="238"/>
+      <operator activated="true" class="write_csv" compatibility="9.6.000" expanded="true" height="82" name="Write CSV" width="90" x="1519" y="238">
+        <parameter key="csv_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output StopWord\Training_StopWords.csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="read_excel" compatibility="9.6.000" expanded="true" height="68" name="Read Excel (2)" width="90" x="45" y="697">
+        <parameter key="excel_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output 4-Gram without Plural\Ingredients_Test_Recipes_4_gram_own_stem.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Cuisine.true.polynominal.attribute"/>
+          <parameter key="1" value="Recipe.true.polynominal.attribute"/>
+          <parameter key="2" value="URL.true.polynominal.attribute"/>
+          <parameter key="3" value="Response-Code.true.integer.attribute"/>
+          <parameter key="4" value="Response-Message.true.polynominal.attribute"/>
+          <parameter key="5" value="Content-Type.true.polynominal.attribute"/>
+          <parameter key="6" value="Content-Length.true.integer.attribute"/>
+          <parameter key="7" value="Date.true.date_time.attribute"/>
+          <parameter key="8" value=" all purpose flour  .true.integer.attribute"/>
+          <parameter key="9" value=" almond milk    .true.integer.attribute"/>
+          <parameter key="10" value=" apple cider vinegar  .true.integer.attribute"/>
+          <parameter key="11" value=" bacon      .true.integer.attribute"/>
+          <parameter key="12" value=" bai leaf    .true.integer.attribute"/>
+          <parameter key="13" value=" baking powder    .true.integer.attribute"/>
+          <parameter key="14" value=" banana pepper    .true.integer.attribute"/>
+          <parameter key="15" value=" basil      .true.integer.attribute"/>
+          <parameter key="16" value=" bean sprout    .true.integer.attribute"/>
+          <parameter key="17" value=" beef round    .true.integer.attribute"/>
+          <parameter key="18" value=" bell pepper    .true.integer.attribute"/>
+          <parameter key="19" value=" boneless skinless chicken breasts.true.integer.attribute"/>
+          <parameter key="20" value=" broccoli rabe    .true.integer.attribute"/>
+          <parameter key="21" value=" brown sugar    .true.integer.attribute"/>
+          <parameter key="22" value=" canola oil    .true.integer.attribute"/>
+          <parameter key="23" value=" cardamom pod    .true.integer.attribute"/>
+          <parameter key="24" value=" carrot      .true.integer.attribute"/>
+          <parameter key="25" value=" cashew nut    .true.integer.attribute"/>
+          <parameter key="26" value=" celeri root    .true.integer.attribute"/>
+          <parameter key="27" value=" cherri tomato    .true.integer.attribute"/>
+          <parameter key="28" value=" chicken      .true.integer.attribute"/>
+          <parameter key="29" value=" chicken stock    .true.integer.attribute"/>
+          <parameter key="30" value=" chile      .true.integer.attribute"/>
+          <parameter key="31" value=" chili garlic sauce  .true.integer.attribute"/>
+          <parameter key="32" value=" chili powder    .true.integer.attribute"/>
+          <parameter key="33" value=" chili sauce    .true.integer.attribute"/>
+          <parameter key="34" value=" chilli      .true.integer.attribute"/>
+          <parameter key="35" value=" chinese broccoli    .true.integer.attribute"/>
+          <parameter key="36" value=" chinese spice    .true.integer.attribute"/>
+          <parameter key="37" value=" chopped fresh cilantro  .true.integer.attribute"/>
+          <parameter key="38" value=" chopped onion    .true.integer.attribute"/>
+          <parameter key="39" value=" cider vinegar    .true.integer.attribute"/>
+          <parameter key="40" value=" cilantro      .true.integer.attribute"/>
+          <parameter key="41" value=" clove      .true.integer.attribute"/>
+          <parameter key="42" value=" cocoa      .true.integer.attribute"/>
+          <parameter key="43" value=" coconut amino    .true.integer.attribute"/>
+          <parameter key="44" value=" coconut milk    .true.integer.attribute"/>
+          <parameter key="45" value=" coconut oil    .true.integer.attribute"/>
+          <parameter key="46" value=" cooking sherri    .true.integer.attribute"/>
+          <parameter key="47" value=" cooking water    .true.integer.attribute"/>
+          <parameter key="48" value=" coriander      .true.integer.attribute"/>
+          <parameter key="49" value=" coriander seed    .true.integer.attribute"/>
+          <parameter key="50" value=" corn flour    .true.integer.attribute"/>
+          <parameter key="51" value=" corn grit    .true.integer.attribute"/>
+          <parameter key="52" value=" cornmeal      .true.integer.attribute"/>
+          <parameter key="53" value=" cottage cheese    .true.integer.attribute"/>
+          <parameter key="54" value=" crab meat    .true.integer.attribute"/>
+          <parameter key="55" value=" cracked black pepper  .true.integer.attribute"/>
+          <parameter key="56" value=" crumbled feta cheese  .true.integer.attribute"/>
+          <parameter key="57" value=" cucumber      .true.integer.attribute"/>
+          <parameter key="58" value=" cumin      .true.integer.attribute"/>
+          <parameter key="59" value=" dark soi sauce  .true.integer.attribute"/>
+          <parameter key="60" value=" dessert wine    .true.integer.attribute"/>
+          <parameter key="61" value=" dill      .true.integer.attribute"/>
+          <parameter key="62" value=" dri sherri    .true.integer.attribute"/>
+          <parameter key="63" value=" dri yeast    .true.integer.attribute"/>
+          <parameter key="64" value=" dried basil    .true.integer.attribute"/>
+          <parameter key="65" value=" dried oregano    .true.integer.attribute"/>
+          <parameter key="66" value=" duck      .true.integer.attribute"/>
+          <parameter key="67" value=" duck breast    .true.integer.attribute"/>
+          <parameter key="68" value=" egg      .true.integer.attribute"/>
+          <parameter key="69" value=" egg white    .true.integer.attribute"/>
+          <parameter key="70" value=" evaporated milk    .true.integer.attribute"/>
+          <parameter key="71" value=" extra virgin olive oil.true.integer.attribute"/>
+          <parameter key="72" value=" fennel seed    .true.integer.attribute"/>
+          <parameter key="73" value=" feta      .true.integer.attribute"/>
+          <parameter key="74" value=" feta cheese    .true.integer.attribute"/>
+          <parameter key="75" value=" fish sauce    .true.integer.attribute"/>
+          <parameter key="76" value=" flank steak    .true.integer.attribute"/>
+          <parameter key="77" value=" flour      .true.integer.attribute"/>
+          <parameter key="78" value=" fresh  me juice  .true.integer.attribute"/>
+          <parameter key="79" value=" fresh basil leaf   .true.integer.attribute"/>
+          <parameter key="80" value=" fresh cilantro    .true.integer.attribute"/>
+          <parameter key="81" value=" fresh ginger    .true.integer.attribute"/>
+          <parameter key="82" value=" fresh mint    .true.integer.attribute"/>
+          <parameter key="83" value=" fresh mint leaf   .true.integer.attribute"/>
+          <parameter key="84" value=" fresh orange juice  .true.integer.attribute"/>
+          <parameter key="85" value=" fresh oregano    .true.integer.attribute"/>
+          <parameter key="86" value=" fresh rosemari    .true.integer.attribute"/>
+          <parameter key="87" value=" frozen spinach    .true.integer.attribute"/>
+          <parameter key="88" value=" galangal      .true.integer.attribute"/>
+          <parameter key="89" value=" garlic      .true.integer.attribute"/>
+          <parameter key="90" value=" garlic clove    .true.integer.attribute"/>
+          <parameter key="91" value=" garlic powder    .true.integer.attribute"/>
+          <parameter key="92" value=" ginger garlic paste  .true.integer.attribute"/>
+          <parameter key="93" value=" ginger powder    .true.integer.attribute"/>
+          <parameter key="94" value=" gnocchi      .true.integer.attribute"/>
+          <parameter key="95" value=" grated mozzarella cheese  .true.integer.attribute"/>
+          <parameter key="96" value=" grated nutmeg    .true.integer.attribute"/>
+          <parameter key="97" value=" greek yogurt    .true.integer.attribute"/>
+          <parameter key="98" value=" green      .true.integer.attribute"/>
+          <parameter key="99" value=" green cabbage    .true.integer.attribute"/>
+          <parameter key="100" value=" green chili    .true.integer.attribute"/>
+          <parameter key="101" value=" green chilli    .true.integer.attribute"/>
+          <parameter key="102" value=" green onion    .true.integer.attribute"/>
+          <parameter key="103" value=" green pepper    .true.integer.attribute"/>
+          <parameter key="104" value=" grill seasoning    .true.integer.attribute"/>
+          <parameter key="105" value=" ground beef    .true.integer.attribute"/>
+          <parameter key="106" value=" ground black pepper  .true.integer.attribute"/>
+          <parameter key="107" value=" ground cinnamon    .true.integer.attribute"/>
+          <parameter key="108" value=" ground cumin    .true.integer.attribute"/>
+          <parameter key="109" value=" ground pork    .true.integer.attribute"/>
+          <parameter key="110" value=" groundnut oil    .true.integer.attribute"/>
+          <parameter key="111" value=" ham      .true.integer.attribute"/>
+          <parameter key="112" value=" hard cheese    .true.integer.attribute"/>
+          <parameter key="113" value=" hard salami    .true.integer.attribute"/>
+          <parameter key="114" value=" honei      .true.integer.attribute"/>
+          <parameter key="115" value=" honei mustard    .true.integer.attribute"/>
+          <parameter key="116" value=" iceberg lettuce    .true.integer.attribute"/>
+          <parameter key="117" value=" instant dri yeast  .true.integer.attribute"/>
+          <parameter key="118" value=" italian chicken sausage  .true.integer.attribute"/>
+          <parameter key="119" value=" italian dressing    .true.integer.attribute"/>
+          <parameter key="120" value=" italian sausage    .true.integer.attribute"/>
+          <parameter key="121" value=" jalapeno pepper    .true.integer.attribute"/>
+          <parameter key="122" value=" juice      .true.integer.attribute"/>
+          <parameter key="123" value=" kaffir  me leaf   .true.integer.attribute"/>
+          <parameter key="124" value=" kalamata olive    .true.integer.attribute"/>
+          <parameter key="125" value=" lard      .true.integer.attribute"/>
+          <parameter key="126" value=" large egg    .true.integer.attribute"/>
+          <parameter key="127" value=" lean ground turkei  .true.integer.attribute"/>
+          <parameter key="128" value=" lemon      .true.integer.attribute"/>
+          <parameter key="129" value=" lemon juice    .true.integer.attribute"/>
+          <parameter key="130" value=" lemon pepper    .true.integer.attribute"/>
+          <parameter key="131" value=" lemon slice    .true.integer.attribute"/>
+          <parameter key="132" value=" lemongrass      .true.integer.attribute"/>
+          <parameter key="133" value=" lemongrass stalk    .true.integer.attribute"/>
+          <parameter key="134" value=" lime      .true.integer.attribute"/>
+          <parameter key="135" value=" lime juice    .true.integer.attribute"/>
+          <parameter key="136" value=" lime wedge    .true.integer.attribute"/>
+          <parameter key="137" value=" low salt chicken broth.true.integer.attribute"/>
+          <parameter key="138" value=" maple syrup    .true.integer.attribute"/>
+          <parameter key="139" value=" marinara sauce    .true.integer.attribute"/>
+          <parameter key="140" value=" medium carrot    .true.integer.attribute"/>
+          <parameter key="141" value=" medium tomato    .true.integer.attribute"/>
+          <parameter key="142" value=" milk      .true.integer.attribute"/>
+          <parameter key="143" value=" minced garlic    .true.integer.attribute"/>
+          <parameter key="144" value=" mineral water    .true.integer.attribute"/>
+          <parameter key="145" value=" mint      .true.integer.attribute"/>
+          <parameter key="146" value=" mozzarella      .true.integer.attribute"/>
+          <parameter key="147" value=" mung bean noodle  .true.integer.attribute"/>
+          <parameter key="148" value=" mustard      .true.integer.attribute"/>
+          <parameter key="149" value=" napa cabbage    .true.integer.attribute"/>
+          <parameter key="150" value=" natural yogurt    .true.integer.attribute"/>
+          <parameter key="151" value=" noodle      .true.integer.attribute"/>
+          <parameter key="152" value=" oil      .true.integer.attribute"/>
+          <parameter key="153" value=" olive oil    .true.integer.attribute"/>
+          <parameter key="154" value=" onion      .true.integer.attribute"/>
+          <parameter key="155" value=" onion powder    .true.integer.attribute"/>
+          <parameter key="156" value=" orange juice    .true.integer.attribute"/>
+          <parameter key="157" value=" oregano      .true.integer.attribute"/>
+          <parameter key="158" value=" oyster mushroom    .true.integer.attribute"/>
+          <parameter key="159" value=" oyster sauce    .true.integer.attribute"/>
+          <parameter key="160" value=" paneer      .true.integer.attribute"/>
+          <parameter key="161" value=" parmesan cheese    .true.integer.attribute"/>
+          <parameter key="162" value=" parslei      .true.integer.attribute"/>
+          <parameter key="163" value=" parslei root    .true.integer.attribute"/>
+          <parameter key="164" value=" pasta      .true.integer.attribute"/>
+          <parameter key="165" value=" pasta water    .true.integer.attribute"/>
+          <parameter key="166" value=" peanut      .true.integer.attribute"/>
+          <parameter key="167" value=" peanut butter    .true.integer.attribute"/>
+          <parameter key="168" value=" peanut oil    .true.integer.attribute"/>
+          <parameter key="169" value=" peeled fresh ginger  .true.integer.attribute"/>
+          <parameter key="170" value=" pepper      .true.integer.attribute"/>
+          <parameter key="171" value=" pepperoni      .true.integer.attribute"/>
+          <parameter key="172" value=" pita bread    .true.integer.attribute"/>
+          <parameter key="173" value=" plain greek yogurt  .true.integer.attribute"/>
+          <parameter key="174" value=" pork      .true.integer.attribute"/>
+          <parameter key="175" value=" prawn      .true.integer.attribute"/>
+          <parameter key="176" value=" pressed tofu    .true.integer.attribute"/>
+          <parameter key="177" value=" prune      .true.integer.attribute"/>
+          <parameter key="178" value=" radishe      .true.integer.attribute"/>
+          <parameter key="179" value=" ramen noodle soup mix.true.integer.attribute"/>
+          <parameter key="180" value=" red bell pepper  .true.integer.attribute"/>
+          <parameter key="181" value=" red onion    .true.integer.attribute"/>
+          <parameter key="182" value=" red wine vinegar  .true.integer.attribute"/>
+          <parameter key="183" value=" rice noodle    .true.integer.attribute"/>
+          <parameter key="184" value=" rice stick noodle  .true.integer.attribute"/>
+          <parameter key="185" value=" rice vermicelli    .true.integer.attribute"/>
+          <parameter key="186" value=" rice vinegar    .true.integer.attribute"/>
+          <parameter key="187" value=" rice wine vinegar  .true.integer.attribute"/>
+          <parameter key="188" value=" roasted peanut    .true.integer.attribute"/>
+          <parameter key="189" value=" roma tomato    .true.integer.attribute"/>
+          <parameter key="190" value=" romaine      .true.integer.attribute"/>
+          <parameter key="191" value=" romaine lettuce    .true.integer.attribute"/>
+          <parameter key="192" value=" salt      .true.integer.attribute"/>
+          <parameter key="193" value=" sambal oelek    .true.integer.attribute"/>
+          <parameter key="194" value=" scallion      .true.integer.attribute"/>
+          <parameter key="195" value=" sea salt    .true.integer.attribute"/>
+          <parameter key="196" value=" seasoned rice vinegar  .true.integer.attribute"/>
+          <parameter key="197" value=" sesame oil    .true.integer.attribute"/>
+          <parameter key="198" value=" sesame seed    .true.integer.attribute"/>
+          <parameter key="199" value=" shallot      .true.integer.attribute"/>
+          <parameter key="200" value=" shredded carrot    .true.integer.attribute"/>
+          <parameter key="201" value=" shredded cheese    .true.integer.attribute"/>
+          <parameter key="202" value=" shrimp      .true.integer.attribute"/>
+          <parameter key="203" value=" skinless boneless chicken breast.true.integer.attribute"/>
+          <parameter key="204" value=" sliced black olive  .true.integer.attribute"/>
+          <parameter key="205" value=" sliced cucumber    .true.integer.attribute"/>
+          <parameter key="206" value=" sliced green onion  .true.integer.attribute"/>
+          <parameter key="207" value=" sliced tomato    .true.integer.attribute"/>
+          <parameter key="208" value=" slivered almond    .true.integer.attribute"/>
+          <parameter key="209" value=" small egg    .true.integer.attribute"/>
+          <parameter key="210" value=" snow pea    .true.integer.attribute"/>
+          <parameter key="211" value=" soi sauce    .true.integer.attribute"/>
+          <parameter key="212" value=" sour cream    .true.integer.attribute"/>
+          <parameter key="213" value=" sriracha sauce    .true.integer.attribute"/>
+          <parameter key="214" value=" star anise    .true.integer.attribute"/>
+          <parameter key="215" value=" sugar      .true.integer.attribute"/>
+          <parameter key="216" value=" sunflower oil    .true.integer.attribute"/>
+          <parameter key="217" value=" tahini      .true.integer.attribute"/>
+          <parameter key="218" value=" thai basil leaf   .true.integer.attribute"/>
+          <parameter key="219" value=" thai fish sauce  .true.integer.attribute"/>
+          <parameter key="220" value=" thai red curri paste.true.integer.attribute"/>
+          <parameter key="221" value=" thyme      .true.integer.attribute"/>
+          <parameter key="222" value=" toasted sesame oil  .true.integer.attribute"/>
+          <parameter key="223" value=" toasted sesame seed  .true.integer.attribute"/>
+          <parameter key="224" value=" tomato      .true.integer.attribute"/>
+          <parameter key="225" value=" tomato paste    .true.integer.attribute"/>
+          <parameter key="226" value=" tomato sauce    .true.integer.attribute"/>
+          <parameter key="227" value=" vanilla extract    .true.integer.attribute"/>
+          <parameter key="228" value=" vanilla pod    .true.integer.attribute"/>
+          <parameter key="229" value=" vegetable broth    .true.integer.attribute"/>
+          <parameter key="230" value=" veggi      .true.integer.attribute"/>
+          <parameter key="231" value=" vietnamese fish sauce  .true.integer.attribute"/>
+          <parameter key="232" value=" vietnamese rice paper  .true.integer.attribute"/>
+          <parameter key="233" value=" walnut halve    .true.integer.attribute"/>
+          <parameter key="234" value=" warm water    .true.integer.attribute"/>
+          <parameter key="235" value=" water      .true.integer.attribute"/>
+          <parameter key="236" value=" white onion    .true.integer.attribute"/>
+          <parameter key="237" value=" white vinegar    .true.integer.attribute"/>
+          <parameter key="238" value=" whole wheat pasta  .true.integer.attribute"/>
+          <parameter key="239" value=" whole wheat penne pasta.true.integer.attribute"/>
+          <parameter key="240" value=" wine      .true.integer.attribute"/>
+          <parameter key="241" value=" wine vinegar    .true.integer.attribute"/>
+          <parameter key="242" value=" yakisoba noodle    .true.integer.attribute"/>
+          <parameter key="243" value=" yellow curri paste  .true.integer.attribute"/>
+          <parameter key="244" value=" yellow onion    .true.integer.attribute"/>
+          <parameter key="245" value=" yogurt      .true.integer.attribute"/>
+          <parameter key="246" value=" zucchini      .true.integer.attribute"/>
+          <parameter key="247" value="Link.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes (2)" width="90" x="179" y="697">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="URL|Response-Code|Response-Message|Content-Length|Content-Type|Date"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="true"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="aggregate" compatibility="9.6.000" expanded="true" height="82" name="Aggregate (2)" width="90" x="313" y="697">
+        <parameter key="use_default_aggregation" value="true"/>
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="Cuisine|Link|Recipe"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="true"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="default_aggregation_function" value="sum"/>
+        <list key="aggregation_attributes"/>
+        <parameter key="group_by_attributes" value="Cuisine"/>
+        <parameter key="count_all_combinations" value="false"/>
+        <parameter key="only_distinct" value="false"/>
+        <parameter key="ignore_missings" value="true"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role" width="90" x="447" y="697">
+        <parameter key="attribute_name" value="Cuisine"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="rename_by_replacing" compatibility="9.6.000" expanded="true" height="82" name="Rename by Replacing (3)" width="90" x="581" y="697">
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="replace_what" value=".*?\("/>
+      </operator>
+      <operator activated="true" class="rename_by_replacing" compatibility="9.6.000" expanded="true" height="82" name="Rename by Replacing (4)" width="90" x="715" y="697">
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="replace_what" value="\)"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="103" name="Multiply (2)" width="90" x="45" y="901"/>
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (5)" width="90" x="179" y="901">
         <parameter key="attribute_name" value="id"/>
         <parameter key="target_role" value="label"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="weight_by_deviation" compatibility="9.6.000" expanded="true" height="82" name="Weight by Deviation (3)" width="90" x="849" y="289">
+      <operator activated="true" class="weight_by_deviation" compatibility="9.6.000" expanded="true" height="82" name="Weight by Deviation (2)" width="90" x="313" y="901">
         <parameter key="normalize_weights" value="false"/>
         <parameter key="sort_weights" value="true"/>
-        <parameter key="sort_direction" value="ascending"/>
+        <parameter key="sort_direction" value="descending"/>
         <parameter key="normalize" value="none"/>
       </operator>
-      <operator activated="true" class="select_by_weights" compatibility="9.6.000" expanded="true" height="103" name="Chinese" width="90" x="983" y="289">
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (12)" width="90" x="313" y="1054">
+        <parameter key="attribute_name" value="Cuisine"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (4)" width="90" x="447" y="1054"/>
+      <operator activated="true" class="r_scripting:execute_r" compatibility="9.6.000" expanded="true" height="103" name="Execute R (2)" width="90" x="581" y="1054">
+        <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;rm_main = function(data)&#10;{&#10;    data$yn &lt;- apply(data[,0:5], 1, function(r) { all(r &gt; 0)}) &#10;    return(data)&#10;}&#10;"/>
+        <parameter key="use_default_R" value="true"/>
+        <parameter key="Rscript_executable" value="C:/R/Rscript.exe"/>
+        <parameter key="use_default_R_LIBS_paths" value="true"/>
+        <enumeration key="R_LIBS_paths"/>
+      </operator>
+      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (8)" width="90" x="715" y="1054">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list">
+          <parameter key="filters_entry_key" value="yn.equals.true"/>
+        </list>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <operator activated="true" class="select_by_weights" compatibility="9.6.000" expanded="true" height="103" name="select by weights (2)" width="90" x="447" y="901">
         <parameter key="weight_relation" value="greater"/>
         <parameter key="weight" value="0.6"/>
         <parameter key="k" value="10"/>
         <parameter key="p" value="0.5"/>
         <parameter key="deselect_unknown" value="true"/>
-        <parameter key="use_absolute_weights" value="true"/>
+        <parameter key="use_absolute_weights" value="false"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (9)" width="90" x="1385" y="34">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="id"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="intersect" compatibility="9.6.000" expanded="true" height="82" name="Intersect" width="90" x="1519" y="34"/>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (3)" width="90" x="1653" y="34"/>
-      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples" width="90" x="1787" y="34">
-        <parameter key="parameter_expression" value=""/>
-        <parameter key="condition_class" value="custom_filters"/>
-        <parameter key="invert_filter" value="false"/>
-        <list key="filters_list">
-          <parameter key="filters_entry_key" value="id.equals.att_1"/>
-          <parameter key="filters_entry_key" value="id.equals.att_2"/>
-          <parameter key="filters_entry_key" value="id.equals.att_3"/>
-          <parameter key="filters_entry_key" value="id.equals.att_4"/>
-          <parameter key="filters_entry_key" value="id.equals.att_5"/>
-          <parameter key="filters_entry_key" value="id.equals.att_6"/>
-        </list>
-        <parameter key="filters_logic_and" value="true"/>
-        <parameter key="filters_check_metadata" value="true"/>
-      </operator>
-      <operator activated="true" class="generate_attributes" compatibility="9.6.000" expanded="true" height="82" name="Generate Attributes (2)" width="90" x="1117" y="136">
+      <operator activated="true" class="generate_attributes" compatibility="9.6.000" expanded="true" height="82" name="Generate Attributes (2)" width="90" x="581" y="901">
         <list key="function_descriptions">
           <parameter key="yn" value="false"/>
         </list>
         <parameter key="keep_all" value="true"/>
       </operator>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (4)" width="90" x="1251" y="136"/>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (10)" width="90" x="1385" y="136">
+      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (5)" width="90" x="715" y="901"/>
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (10)" width="90" x="849" y="901">
         <parameter key="attribute_name" value="id"/>
         <parameter key="target_role" value="id"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="intersect" compatibility="9.6.000" expanded="true" height="82" name="Intersect (2)" width="90" x="1519" y="136"/>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (5)" width="90" x="1653" y="136"/>
-      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (2)" width="90" x="1787" y="136">
+      <operator activated="true" class="intersect" compatibility="9.6.000" expanded="true" height="82" name="Intersect (2)" width="90" x="983" y="901"/>
+      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (6)" width="90" x="1117" y="901"/>
+      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (2)" width="90" x="1251" y="901">
         <parameter key="parameter_expression" value=""/>
         <parameter key="condition_class" value="custom_filters"/>
         <parameter key="invert_filter" value="false"/>
@@ -1278,130 +1571,9 @@
         <parameter key="filters_logic_and" value="true"/>
         <parameter key="filters_check_metadata" value="true"/>
       </operator>
-      <operator activated="true" class="union" compatibility="9.6.000" expanded="true" height="82" name="Union" width="90" x="1988" y="85"/>
-      <operator activated="true" class="generate_attributes" compatibility="9.6.000" expanded="true" height="82" name="Generate Attributes (3)" width="90" x="1117" y="289">
-        <list key="function_descriptions">
-          <parameter key="yn" value="false"/>
-        </list>
-        <parameter key="keep_all" value="true"/>
-      </operator>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (6)" width="90" x="1251" y="289"/>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (12)" width="90" x="1385" y="289">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="id"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="intersect" compatibility="9.6.000" expanded="true" height="82" name="Intersect (3)" width="90" x="1519" y="289"/>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (7)" width="90" x="1653" y="289"/>
-      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (3)" width="90" x="1787" y="289">
-        <parameter key="parameter_expression" value=""/>
-        <parameter key="condition_class" value="custom_filters"/>
-        <parameter key="invert_filter" value="false"/>
-        <list key="filters_list">
-          <parameter key="filters_entry_key" value="id.equals.att_1"/>
-          <parameter key="filters_entry_key" value="id.equals.att_2"/>
-          <parameter key="filters_entry_key" value="id.equals.att_3"/>
-          <parameter key="filters_entry_key" value="id.equals.att_4"/>
-          <parameter key="filters_entry_key" value="id.equals.att_5"/>
-          <parameter key="filters_entry_key" value="id.equals.att_6"/>
-        </list>
-        <parameter key="filters_logic_and" value="true"/>
-        <parameter key="filters_check_metadata" value="true"/>
-      </operator>
-      <operator activated="true" class="generate_attributes" compatibility="9.6.000" expanded="true" height="82" name="Generate Attributes (4)" width="90" x="1117" y="391">
-        <list key="function_descriptions">
-          <parameter key="yn" value="false"/>
-        </list>
-        <parameter key="keep_all" value="true"/>
-      </operator>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (8)" width="90" x="1251" y="391"/>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (13)" width="90" x="1385" y="391">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="id"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="intersect" compatibility="9.6.000" expanded="true" height="82" name="Intersect (4)" width="90" x="1519" y="391"/>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (9)" width="90" x="1653" y="391"/>
-      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (4)" width="90" x="1787" y="391">
-        <parameter key="parameter_expression" value=""/>
-        <parameter key="condition_class" value="custom_filters"/>
-        <parameter key="invert_filter" value="false"/>
-        <list key="filters_list">
-          <parameter key="filters_entry_key" value="id.equals.att_1"/>
-          <parameter key="filters_entry_key" value="id.equals.att_2"/>
-          <parameter key="filters_entry_key" value="id.equals.att_3"/>
-          <parameter key="filters_entry_key" value="id.equals.att_4"/>
-          <parameter key="filters_entry_key" value="id.equals.att_5"/>
-          <parameter key="filters_entry_key" value="id.equals.att_6"/>
-        </list>
-        <parameter key="filters_logic_and" value="true"/>
-        <parameter key="filters_check_metadata" value="true"/>
-      </operator>
-      <operator activated="true" class="union" compatibility="9.6.000" expanded="true" height="82" name="Union (4)" width="90" x="1988" y="340"/>
-      <operator activated="true" class="generate_attributes" compatibility="9.6.000" expanded="true" height="82" name="Generate Attributes (5)" width="90" x="1117" y="544">
-        <list key="function_descriptions">
-          <parameter key="yn" value="false"/>
-        </list>
-        <parameter key="keep_all" value="true"/>
-      </operator>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (10)" width="90" x="1251" y="544"/>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (14)" width="90" x="1385" y="544">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="id"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="intersect" compatibility="9.6.000" expanded="true" height="82" name="Intersect (5)" width="90" x="1519" y="544"/>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (11)" width="90" x="1653" y="544"/>
-      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (5)" width="90" x="1787" y="544">
-        <parameter key="parameter_expression" value=""/>
-        <parameter key="condition_class" value="custom_filters"/>
-        <parameter key="invert_filter" value="false"/>
-        <list key="filters_list">
-          <parameter key="filters_entry_key" value="id.equals.att_1"/>
-          <parameter key="filters_entry_key" value="id.equals.att_2"/>
-          <parameter key="filters_entry_key" value="id.equals.att_3"/>
-          <parameter key="filters_entry_key" value="id.equals.att_4"/>
-          <parameter key="filters_entry_key" value="id.equals.att_5"/>
-          <parameter key="filters_entry_key" value="id.equals.att_6"/>
-        </list>
-        <parameter key="filters_logic_and" value="true"/>
-        <parameter key="filters_check_metadata" value="true"/>
-      </operator>
-      <operator activated="true" class="generate_attributes" compatibility="9.6.000" expanded="true" height="82" name="Generate Attributes (6)" width="90" x="1117" y="646">
-        <list key="function_descriptions">
-          <parameter key="yn" value="false"/>
-        </list>
-        <parameter key="keep_all" value="true"/>
-      </operator>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (12)" width="90" x="1251" y="646"/>
-      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role (15)" width="90" x="1385" y="646">
-        <parameter key="attribute_name" value="id"/>
-        <parameter key="target_role" value="id"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="intersect" compatibility="9.6.000" expanded="true" height="82" name="Intersect (6)" width="90" x="1519" y="646"/>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (13)" width="90" x="1653" y="646"/>
-      <operator activated="true" class="filter_examples" compatibility="9.6.000" expanded="true" height="103" name="Filter Examples (6)" width="90" x="1787" y="646">
-        <parameter key="parameter_expression" value=""/>
-        <parameter key="condition_class" value="custom_filters"/>
-        <parameter key="invert_filter" value="false"/>
-        <list key="filters_list">
-          <parameter key="filters_entry_key" value="id.equals.att_1"/>
-          <parameter key="filters_entry_key" value="id.equals.att_2"/>
-          <parameter key="filters_entry_key" value="id.equals.att_3"/>
-          <parameter key="filters_entry_key" value="id.equals.att_4"/>
-          <parameter key="filters_entry_key" value="id.equals.att_5"/>
-          <parameter key="filters_entry_key" value="id.equals.att_6"/>
-        </list>
-        <parameter key="filters_logic_and" value="true"/>
-        <parameter key="filters_check_metadata" value="true"/>
-      </operator>
-      <operator activated="true" class="union" compatibility="9.6.000" expanded="true" height="82" name="Union (2)" width="90" x="1921" y="595"/>
-      <operator activated="true" class="union" compatibility="9.6.000" expanded="true" height="82" name="Union (3)" width="90" x="1988" y="493"/>
-      <operator activated="true" class="union" compatibility="9.6.000" expanded="true" height="82" name="Union (5)" width="90" x="2122" y="238"/>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (14)" width="90" x="2256" y="238"/>
-      <operator activated="true" class="write_csv" compatibility="9.6.000" expanded="true" height="82" name="Write CSV" width="90" x="2390" y="238">
-        <parameter key="csv_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output StopWord\StopWords.csv"/>
+      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Test Data" width="90" x="1385" y="901"/>
+      <operator activated="true" class="write_csv" compatibility="9.6.000" expanded="true" height="82" name="Write CSV (2)" width="90" x="1519" y="901">
+        <parameter key="csv_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output StopWord\Test_StopWords.csv"/>
         <parameter key="column_separator" value=";"/>
         <parameter key="write_attribute_names" value="true"/>
         <parameter key="quote_nominal_values" value="true"/>
@@ -1410,6 +1582,7 @@
         <parameter key="encoding" value="SYSTEM"/>
       </operator>
       <connect from_port="input 1" to_op="Read Excel" to_port="file"/>
+      <connect from_port="input 2" to_op="Read Excel (2)" to_port="file"/>
       <connect from_op="Read Excel" from_port="output" to_op="Select Attributes" to_port="example set input"/>
       <connect from_op="Select Attributes" from_port="example set output" to_op="Aggregate" to_port="example set input"/>
       <connect from_op="Aggregate" from_port="example set output" to_op="Set Role (2)" to_port="example set input"/>
@@ -1417,93 +1590,55 @@
       <connect from_op="Rename by Replacing" from_port="example set output" to_op="Rename by Replacing (2)" to_port="example set input"/>
       <connect from_op="Rename by Replacing (2)" from_port="example set output" to_op="Multiply" to_port="input"/>
       <connect from_op="Multiply" from_port="output 1" to_op="Set Role (4)" to_port="example set input"/>
-      <connect from_op="Multiply" from_port="output 2" to_op="Set Role" to_port="example set input"/>
-      <connect from_op="Multiply" from_port="output 3" to_op="Set Role (5)" to_port="example set input"/>
-      <connect from_op="Multiply" from_port="output 4" to_op="Set Role (6)" to_port="example set input"/>
-      <connect from_op="Multiply" from_port="output 5" to_op="Set Role (7)" to_port="example set input"/>
-      <connect from_op="Multiply" from_port="output 6" to_op="Set Role (8)" to_port="example set input"/>
-      <connect from_op="Multiply" from_port="output 7" to_op="Set Role (11)" to_port="example set input"/>
-      <connect from_op="Set Role (8)" from_port="example set output" to_op="Weight by Deviation (6)" to_port="example set"/>
-      <connect from_op="Set Role (7)" from_port="example set output" to_op="Weight by Deviation (5)" to_port="example set"/>
-      <connect from_op="Set Role (6)" from_port="example set output" to_op="Weight by Deviation (4)" to_port="example set"/>
-      <connect from_op="Set Role" from_port="example set output" to_op="Weight by Deviation (2)" to_port="example set"/>
+      <connect from_op="Multiply" from_port="output 2" to_op="Set Role (11)" to_port="example set input"/>
       <connect from_op="Set Role (4)" from_port="example set output" to_op="Weight by Deviation" to_port="example set"/>
-      <connect from_op="Weight by Deviation (6)" from_port="weights" to_op="Thai" to_port="weights"/>
-      <connect from_op="Weight by Deviation (6)" from_port="example set" to_op="Thai" to_port="example set input"/>
-      <connect from_op="Weight by Deviation (5)" from_port="weights" to_op="Italian" to_port="weights"/>
-      <connect from_op="Weight by Deviation (5)" from_port="example set" to_op="Italian" to_port="example set input"/>
-      <connect from_op="Weight by Deviation (4)" from_port="weights" to_op="Greek" to_port="weights"/>
-      <connect from_op="Weight by Deviation (4)" from_port="example set" to_op="Greek" to_port="example set input"/>
-      <connect from_op="Weight by Deviation (2)" from_port="weights" to_op="Croatian" to_port="weights"/>
-      <connect from_op="Weight by Deviation (2)" from_port="example set" to_op="Croatian" to_port="example set input"/>
+      <connect from_op="Weight by Deviation" from_port="weights" to_op="select by weights" to_port="weights"/>
+      <connect from_op="Weight by Deviation" from_port="example set" to_op="select by weights" to_port="example set input"/>
       <connect from_op="Set Role (11)" from_port="example set output" to_op="Transpose" to_port="example set input"/>
       <connect from_op="Transpose" from_port="example set output" to_op="Execute R" to_port="input 1"/>
       <connect from_op="Execute R" from_port="output 1" to_op="Filter Examples (7)" to_port="example set input"/>
-      <connect from_op="Filter Examples (7)" from_port="example set output" to_op="Multiply (2)" to_port="input"/>
-      <connect from_op="Multiply (2)" from_port="output 1" to_op="Intersect" to_port="second"/>
-      <connect from_op="Multiply (2)" from_port="output 2" to_op="Intersect (2)" to_port="second"/>
-      <connect from_op="Multiply (2)" from_port="output 3" to_op="Intersect (3)" to_port="second"/>
-      <connect from_op="Multiply (2)" from_port="output 4" to_op="Intersect (4)" to_port="second"/>
-      <connect from_op="Multiply (2)" from_port="output 5" to_op="Intersect (5)" to_port="second"/>
-      <connect from_op="Multiply (2)" from_port="output 6" to_op="Intersect (6)" to_port="second"/>
-      <connect from_op="Croatian" from_port="example set output" to_op="Generate Attributes (2)" to_port="example set input"/>
-      <connect from_op="Greek" from_port="example set output" to_op="Generate Attributes (4)" to_port="example set input"/>
-      <connect from_op="Italian" from_port="example set output" to_op="Generate Attributes (5)" to_port="example set input"/>
-      <connect from_op="Thai" from_port="example set output" to_op="Generate Attributes (6)" to_port="example set input"/>
-      <connect from_op="Weight by Deviation" from_port="weights" to_op="Vietnamese" to_port="weights"/>
-      <connect from_op="Weight by Deviation" from_port="example set" to_op="Vietnamese" to_port="example set input"/>
-      <connect from_op="Vietnamese" from_port="example set output" to_op="Generate Attributes" to_port="example set input"/>
+      <connect from_op="Filter Examples (7)" from_port="example set output" to_op="Intersect" to_port="second"/>
+      <connect from_op="select by weights" from_port="example set output" to_op="Generate Attributes" to_port="example set input"/>
       <connect from_op="Generate Attributes" from_port="example set output" to_op="Transpose (2)" to_port="example set input"/>
       <connect from_op="Transpose (2)" from_port="example set output" to_op="Set Role (9)" to_port="example set input"/>
-      <connect from_op="Set Role (5)" from_port="example set output" to_op="Weight by Deviation (3)" to_port="example set"/>
-      <connect from_op="Weight by Deviation (3)" from_port="weights" to_op="Chinese" to_port="weights"/>
-      <connect from_op="Weight by Deviation (3)" from_port="example set" to_op="Chinese" to_port="example set input"/>
-      <connect from_op="Chinese" from_port="example set output" to_op="Generate Attributes (3)" to_port="example set input"/>
       <connect from_op="Set Role (9)" from_port="example set output" to_op="Intersect" to_port="example set input"/>
       <connect from_op="Intersect" from_port="example set output" to_op="Transpose (3)" to_port="example set input"/>
       <connect from_op="Transpose (3)" from_port="example set output" to_op="Filter Examples" to_port="example set input"/>
-      <connect from_op="Filter Examples" from_port="example set output" to_op="Union" to_port="example set 1"/>
-      <connect from_op="Generate Attributes (2)" from_port="example set output" to_op="Transpose (4)" to_port="example set input"/>
-      <connect from_op="Transpose (4)" from_port="example set output" to_op="Set Role (10)" to_port="example set input"/>
-      <connect from_op="Set Role (10)" from_port="example set output" to_op="Intersect (2)" to_port="example set input"/>
-      <connect from_op="Intersect (2)" from_port="example set output" to_op="Transpose (5)" to_port="example set input"/>
-      <connect from_op="Transpose (5)" from_port="example set output" to_op="Filter Examples (2)" to_port="example set input"/>
-      <connect from_op="Filter Examples (2)" from_port="example set output" to_op="Union" to_port="example set 2"/>
-      <connect from_op="Union" from_port="union" to_op="Union (5)" to_port="example set 1"/>
-      <connect from_op="Generate Attributes (3)" from_port="example set output" to_op="Transpose (6)" to_port="example set input"/>
-      <connect from_op="Transpose (6)" from_port="example set output" to_op="Set Role (12)" to_port="example set input"/>
-      <connect from_op="Set Role (12)" from_port="example set output" to_op="Intersect (3)" to_port="example set input"/>
-      <connect from_op="Intersect (3)" from_port="example set output" to_op="Transpose (7)" to_port="example set input"/>
-      <connect from_op="Transpose (7)" from_port="example set output" to_op="Filter Examples (3)" to_port="example set input"/>
-      <connect from_op="Filter Examples (3)" from_port="example set output" to_op="Union (4)" to_port="example set 1"/>
-      <connect from_op="Generate Attributes (4)" from_port="example set output" to_op="Transpose (8)" to_port="example set input"/>
-      <connect from_op="Transpose (8)" from_port="example set output" to_op="Set Role (13)" to_port="example set input"/>
-      <connect from_op="Set Role (13)" from_port="example set output" to_op="Intersect (4)" to_port="example set input"/>
-      <connect from_op="Intersect (4)" from_port="example set output" to_op="Transpose (9)" to_port="example set input"/>
-      <connect from_op="Transpose (9)" from_port="example set output" to_op="Filter Examples (4)" to_port="example set input"/>
-      <connect from_op="Filter Examples (4)" from_port="example set output" to_op="Union (4)" to_port="example set 2"/>
-      <connect from_op="Union (4)" from_port="union" to_op="Union (3)" to_port="example set 1"/>
-      <connect from_op="Generate Attributes (5)" from_port="example set output" to_op="Transpose (10)" to_port="example set input"/>
-      <connect from_op="Transpose (10)" from_port="example set output" to_op="Set Role (14)" to_port="example set input"/>
-      <connect from_op="Set Role (14)" from_port="example set output" to_op="Intersect (5)" to_port="example set input"/>
-      <connect from_op="Intersect (5)" from_port="example set output" to_op="Transpose (11)" to_port="example set input"/>
-      <connect from_op="Transpose (11)" from_port="example set output" to_op="Filter Examples (5)" to_port="example set input"/>
-      <connect from_op="Filter Examples (5)" from_port="example set output" to_op="Union (2)" to_port="example set 1"/>
-      <connect from_op="Generate Attributes (6)" from_port="example set output" to_op="Transpose (12)" to_port="example set input"/>
-      <connect from_op="Transpose (12)" from_port="example set output" to_op="Set Role (15)" to_port="example set input"/>
-      <connect from_op="Set Role (15)" from_port="example set output" to_op="Intersect (6)" to_port="example set input"/>
-      <connect from_op="Intersect (6)" from_port="example set output" to_op="Transpose (13)" to_port="example set input"/>
-      <connect from_op="Transpose (13)" from_port="example set output" to_op="Filter Examples (6)" to_port="example set input"/>
-      <connect from_op="Filter Examples (6)" from_port="example set output" to_op="Union (2)" to_port="example set 2"/>
-      <connect from_op="Union (2)" from_port="union" to_op="Union (3)" to_port="example set 2"/>
-      <connect from_op="Union (3)" from_port="union" to_op="Union (5)" to_port="example set 2"/>
-      <connect from_op="Union (5)" from_port="union" to_op="Transpose (14)" to_port="example set input"/>
-      <connect from_op="Transpose (14)" from_port="example set output" to_op="Write CSV" to_port="input"/>
+      <connect from_op="Filter Examples" from_port="example set output" to_op="Training Data" to_port="example set input"/>
+      <connect from_op="Training Data" from_port="example set output" to_op="Write CSV" to_port="input"/>
       <connect from_op="Write CSV" from_port="through" to_port="result 1"/>
+      <connect from_op="Read Excel (2)" from_port="output" to_op="Select Attributes (2)" to_port="example set input"/>
+      <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Aggregate (2)" to_port="example set input"/>
+      <connect from_op="Aggregate (2)" from_port="example set output" to_op="Set Role" to_port="example set input"/>
+      <connect from_op="Set Role" from_port="example set output" to_op="Rename by Replacing (3)" to_port="example set input"/>
+      <connect from_op="Rename by Replacing (3)" from_port="example set output" to_op="Rename by Replacing (4)" to_port="example set input"/>
+      <connect from_op="Rename by Replacing (4)" from_port="example set output" to_op="Multiply (2)" to_port="input"/>
+      <connect from_op="Multiply (2)" from_port="output 1" to_op="Set Role (5)" to_port="example set input"/>
+      <connect from_op="Multiply (2)" from_port="output 2" to_op="Set Role (12)" to_port="example set input"/>
+      <connect from_op="Set Role (5)" from_port="example set output" to_op="Weight by Deviation (2)" to_port="example set"/>
+      <connect from_op="Weight by Deviation (2)" from_port="weights" to_op="select by weights (2)" to_port="weights"/>
+      <connect from_op="Weight by Deviation (2)" from_port="example set" to_op="select by weights (2)" to_port="example set input"/>
+      <connect from_op="Set Role (12)" from_port="example set output" to_op="Transpose (4)" to_port="example set input"/>
+      <connect from_op="Transpose (4)" from_port="example set output" to_op="Execute R (2)" to_port="input 1"/>
+      <connect from_op="Execute R (2)" from_port="output 1" to_op="Filter Examples (8)" to_port="example set input"/>
+      <connect from_op="Filter Examples (8)" from_port="example set output" to_op="Intersect (2)" to_port="second"/>
+      <connect from_op="select by weights (2)" from_port="example set output" to_op="Generate Attributes (2)" to_port="example set input"/>
+      <connect from_op="Generate Attributes (2)" from_port="example set output" to_op="Transpose (5)" to_port="example set input"/>
+      <connect from_op="Transpose (5)" from_port="example set output" to_op="Set Role (10)" to_port="example set input"/>
+      <connect from_op="Set Role (10)" from_port="example set output" to_op="Intersect (2)" to_port="example set input"/>
+      <connect from_op="Intersect (2)" from_port="example set output" to_op="Transpose (6)" to_port="example set input"/>
+      <connect from_op="Transpose (6)" from_port="example set output" to_op="Filter Examples (2)" to_port="example set input"/>
+      <connect from_op="Filter Examples (2)" from_port="example set output" to_op="Test Data" to_port="example set input"/>
+      <connect from_op="Test Data" from_port="example set output" to_op="Write CSV (2)" to_port="input"/>
+      <connect from_op="Write CSV (2)" from_port="through" to_port="result 2"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="source_input 2" spacing="0"/>
+      <portSpacing port="source_input 3" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <description align="right" color="yellow" colored="false" height="503" resized="false" width="1683" x="11" y="16">Trainings Data</description>
+      <description align="right" color="yellow" colored="false" height="503" resized="true" width="1683" x="10" y="682">Test Data</description>
     </process>
   </operator>
 </process>
