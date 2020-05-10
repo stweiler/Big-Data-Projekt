@@ -1100,7 +1100,7 @@
       </operator>
       <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose" width="90" x="447" y="391"/>
       <operator activated="true" class="r_scripting:execute_r" compatibility="9.6.000" expanded="true" height="103" name="Execute R" width="90" x="581" y="391">
-        <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;rm_main = function(data)&#10;{&#10;    data$yn &lt;- apply(data[,0:5], 1, function(r) { all(r &gt; 0)}) &#10;    return(data)&#10;}&#10;"/>
+        <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;rm_main = function(data)&#10;{&#10;    data$yn &lt;- apply(data[,0:5], 1, function(r) { all(r &gt; 1)}) &#10;    return(data)&#10;}&#10;"/>
         <parameter key="use_default_R" value="true"/>
         <parameter key="Rscript_executable" value="C:/R/Rscript.exe"/>
         <parameter key="use_default_R_LIBS_paths" value="true"/>
@@ -1518,7 +1518,7 @@
       </operator>
       <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (4)" width="90" x="447" y="1054"/>
       <operator activated="true" class="r_scripting:execute_r" compatibility="9.6.000" expanded="true" height="103" name="Execute R (2)" width="90" x="581" y="1054">
-        <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;rm_main = function(data)&#10;{&#10;    data$yn &lt;- apply(data[,0:5], 1, function(r) { all(r &gt; 0)}) &#10;    return(data)&#10;}&#10;"/>
+        <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;rm_main = function(data)&#10;{&#10;    data$yn &lt;- apply(data[,0:5], 1, function(r) { all(r &gt; 1)}) &#10;    return(data)&#10;}&#10;"/>
         <parameter key="use_default_R" value="true"/>
         <parameter key="Rscript_executable" value="C:/R/Rscript.exe"/>
         <parameter key="use_default_R_LIBS_paths" value="true"/>
