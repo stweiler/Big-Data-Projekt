@@ -1073,7 +1073,7 @@
         <parameter key="encoding" value="SYSTEM"/>
       </operator>
       <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV" width="90" x="45" y="544">
-        <parameter key="csv_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output StopWord\Test_StopWords.csv"/>
+        <parameter key="csv_file" value="C:\Users\Corny\Documents\GitHub\Big-Data-Projekt\Daten\Prozess Outputs\Preprocessing Output StopWord\Training_StopWords.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
         <parameter key="use_quotes" value="true"/>
@@ -1367,7 +1367,7 @@
         <parameter key="datamanagement" value="double_array"/>
         <parameter key="data_management" value="auto"/>
       </operator>
-      <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (3)" width="90" x="179" y="442"/>
+      <operator activated="true" breakpoints="after" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (3)" width="90" x="179" y="442"/>
       <operator activated="true" class="r_scripting:execute_r" compatibility="9.6.000" expanded="true" height="124" name="Execute R (2)" width="90" x="447" y="442">
         <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;rm_main = function(df, df2)&#10;{&#10;  &#10;    data &lt;- df[!df$id %in% df2$id, ]&#10;&#10;    return(data)&#10;}&#10;"/>
         <parameter key="use_default_R" value="true"/>
@@ -1376,7 +1376,7 @@
         <enumeration key="R_LIBS_paths"/>
       </operator>
       <operator activated="true" class="transpose" compatibility="9.6.000" expanded="true" height="82" name="Transpose (4)" width="90" x="581" y="442"/>
-      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes (2)" width="90" x="715" y="442">
+      <operator activated="true" breakpoints="after" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes (2)" width="90" x="715" y="442">
         <parameter key="attribute_filter_type" value="subset"/>
         <parameter key="attribute" value="id"/>
         <parameter key="attributes" value="id"/>
